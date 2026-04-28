@@ -1,33 +1,36 @@
-<div align="center">
+# aboutme
 
-# 🎉 Congratulations nyao925! 🎉
+个人介绍静态网站，支持中文和日文两种语言切换。
 
-<img src="https://octodex.github.com/images/welcometocat.png" height="200px" />
+## 项目结构
 
-### 🌟 You've successfully completed the exercise! 🌟
+- index.html: 页面入口，负责渲染内容与语言切换
+- i18n/zh.json: 中文文案
+- i18n/ja.json: 日文文案
+- stylesheets/page-style.css: 页面样式
+- static/img/description/my_pic.PNG: 头像图片
 
-## 🚀 Share Your Success!
+## i18n 说明
 
-**Show off your new skills and inspire others!**
+文案已经从页面中抽离到 i18n 目录：
 
-<a href="https://twitter.com/intent/tweet?text=I%20just%20completed%20the%20%22Review%20Pull%20Requests%22%20GitHub%20Skills%20hands-on%20exercise!%20%F0%9F%8E%89%0A%0Ahttps%3A%2F%2Fgithub.com%2Fnyao925%2Fskills-review-pull-requests%0A%0A%23GitHubSkills%20%23OpenSource%20%23GitHubLearn" target="_blank" rel="noopener noreferrer">
-  <img src="https://img.shields.io/badge/Share%20on%20X-1da1f2?style=for-the-badge&logo=x&logoColor=white" alt="Share on X" />
-</a>
-<a href="https://bsky.app/intent/compose?text=I%20just%20completed%20the%20%22Review%20Pull%20Requests%22%20GitHub%20Skills%20hands-on%20exercise!%20%F0%9F%8E%89%0A%0Ahttps%3A%2F%2Fgithub.com%2Fnyao925%2Fskills-review-pull-requests%0A%0A%23GitHubSkills%20%23OpenSource%20%23GitHubLearn" target="_blank" rel="noopener noreferrer">
-  <img src="https://img.shields.io/badge/Share%20on%20Bluesky-0085ff?style=for-the-badge&logo=bluesky&logoColor=white" alt="Share on Bluesky" />
-</a>
-<a href="https://www.linkedin.com/feed/?shareActive=true&text=I%20just%20completed%20the%20%22Review%20Pull%20Requests%22%20GitHub%20Skills%20hands-on%20exercise!%20%F0%9F%8E%89%0A%0Ahttps%3A%2F%2Fgithub.com%2Fnyao925%2Fskills-review-pull-requests%0A%0A%23GitHubSkills%20%23OpenSource%20%23GitHubLearn" target="_blank" rel="noopener noreferrer">
-  <img src="https://img.shields.io/badge/Share%20on%20LinkedIn-0077b5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Share on LinkedIn" />
-</a>
+- i18n/zh.json
+- i18n/ja.json
 
-### 🎯 What's Next?
+如果需要新增字段，请在两个语言文件中保持同样的 key 结构。
 
-**Keep the momentum going!**
+## 本地预览
 
-[![](https://img.shields.io/badge/Return%20to%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/nyao925/skills-review-pull-requests/issues/1)
-[![GitHub Skills](https://img.shields.io/badge/Explore%20GitHub%20Skills-000000?style=for-the-badge&logo=github&logoColor=white)](https://learn.github.com/skills)
+由于页面会通过 fetch 读取本地 JSON，建议用本地静态服务器运行：
 
-*There's no better way to learn than building things!* 🚀
+```bash
+cd aboutme-main
+python3 -m http.server 8000
+```
 
-</div>
+然后访问：http://localhost:8000
+
+## 部署
+
+可直接部署到 GitHub Pages。
 

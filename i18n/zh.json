@@ -1,0 +1,49 @@
+{
+  "metaTitle": "关于我 | 饺子大人",
+  "brandName": "饺子大人",
+  "navGithub": "GitHub",
+  "langSwitch": {
+    "zh": "中文",
+    "ja": "日本語"
+  },
+  "heroTitle": "关于饺子大人",
+  "intro": [
+    "我叫 饺子大人，当然这不是我的真名，只是因为我喜欢吃饺子而已。",
+    "学生时代的我，不懂 Python，不懂 Machine Learning，更不懂人工智能。工作后开始了我漫长的自学之路。我很欣赏网上那些默默奉献的人们，分享自己所学的东西给了我很大的帮助。所以我决定我也要像那些奉献的人们一样，将我的所学分享给大家。",
+    "于是乎，便有了这个网站。这个网站中的所有内容，都是我在网上探索、整理、自学而来的。再加上个人在学习过程中经常出错，以及需要注意的点，总结后分享给大家。",
+    "因为我的工作是跟机器学习、人工智能相关，所以经常使用 Numpy、Pandas 和一些机器学习、深度学习的框架。是的，所以我要分享的也正是这些知识。"
+  ],
+  "learningPath": [
+    "首先，我假设你对 Python 有了一定的了解，您需要了解的是 Numpy 和 Pandas，这两个库可以很好地帮助我们处理数据，以及可视化数据。",
+    "接下来，就可以使用机器学习的框架（例如：scikit-learn）和一些简单的数据集，写出我们的第一个机器学习程序了。",
+    "最后，再使用深度学习的框架（例如：TensorFlow）和一些较大的数据集，写出我们的第一个深度学习程序了。"
+  ],
+  "closing": "可能有错，当然不全，但按你胃（Anyway），成长的路上就是要不断地犯错。Numpy & Pandas -> Machine Learning -> Deep Learning，这是我的炼丹之道。",
+  "background": {
+    "title": "关于我 (DumplingsMajesty's Background)",
+    "items": [
+      "出生 : 中国 (China)",
+      "现居住地 : 东京, 日本",
+      "学历 : 硕士",
+      "公司 : Fujitsu",
+      "工作内容 : 机器学习，深度学习，AI 等等",
+      "兴趣爱好 : 旅游，潜水"
+    ]
+  },
+  "contact": {
+    "title": "联系我",
+    "desc": "联系到我有很多种方式，欢迎大家用各种途径留言，有时间的话，我会尽量回复你的留言或问题。以下是几种可以讨论的方式：",
+    "labels": {
+      "email": "Email:",
+      "github": "Github:",
+      "qq": "QQ:"
+    },
+    "email": "dumplings.majesty@gmail.com",
+    "github": "https://github.com/DumplingsMajesty",
+    "qq": "107614538"
+  },
+  "footer": {
+    "emailLabel": "Email:",
+    "copyright": "© 2020 DumplingsMajesty.github.io All Rights Reserved"
+  }
+}

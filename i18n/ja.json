@@ -1,0 +1,49 @@
+{
+  "metaTitle": "私について | 餃子大人",
+  "brandName": "餃子大人",
+  "navGithub": "GitHub",
+  "langSwitch": {
+    "zh": "中文",
+    "ja": "日本語"
+  },
+  "heroTitle": "餃子大人について",
+  "intro": [
+    "私の名前は餃子大人です。もちろん本名ではなく、ただ餃子が好きだからです。",
+    "学生時代の私は Python も Machine Learning も人工知能も分かりませんでした。仕事を始めてから長い独学の道を歩み、ネットで知識を共有してくれる方々に多く助けられました。だからこそ、私も学んだことを皆さんに共有したいと思うようになりました。",
+    "こうしてこのサイトが生まれました。ここにある内容は、私がネット上で探索・整理・独学してきた知識です。学習中によく間違える点や注意点もまとめて共有しています。",
+    "私の仕事は機械学習と人工知能に関係しているため、Numpy、Pandas、そして機械学習・深層学習のフレームワークをよく使います。だからこそ、ここで共有するのもまさにそれらの知識です。"
+  ],
+  "learningPath": [
+    "まず、Python の基礎があることを前提に、Numpy と Pandas を学びます。これらはデータ処理と可視化にとても役立ちます。",
+    "次に、機械学習フレームワーク（例: scikit-learn）と簡単なデータセットを使って、最初の機械学習プログラムを書きます。",
+    "最後に、深層学習フレームワーク（例: TensorFlow）とより大きなデータセットを使って、最初の深層学習プログラムを書きます。"
+  ],
+  "closing": "間違いはあるかもしれませんし、完璧でもありません。でも成長の道では失敗を重ねることが大切です。Numpy & Pandas -> Machine Learning -> Deep Learning、これが私の学習ロードマップです。",
+  "background": {
+    "title": "自己紹介 (DumplingsMajesty's Background)",
+    "items": [
+      "出身 : 中国 (China)",
+      "現住所 : 東京, 日本",
+      "学歴 : 修士",
+      "会社 : Fujitsu",
+      "仕事内容 : 機械学習、深層学習、AI など",
+      "趣味 : 旅行、ダイビング"
+    ]
+  },
+  "contact": {
+    "title": "連絡先",
+    "desc": "連絡方法はいろいろあります。気軽にメッセージをください。時間があるときにできるだけ返信します。以下は主な連絡手段です。",
+    "labels": {
+      "email": "Email:",
+      "github": "Github:",
+      "qq": "QQ:"
+    },
+    "email": "dumplings.majesty@gmail.com",
+    "github": "https://github.com/DumplingsMajesty",
+    "qq": "107614538"
+  },
+  "footer": {
+    "emailLabel": "Email:",
+    "copyright": "© 2020 DumplingsMajesty.github.io All Rights Reserved"
+  }
+}
