@@ -494,6 +494,11 @@ text-align: center;
 font-size:0.9em;
 border-collapse: collapse;
 margin: 0 auto;
+clear: both;
+}
+
+#background-title {
+clear: both;
 }
 
 .my-background-table tr {
