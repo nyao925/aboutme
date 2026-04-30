@@ -493,6 +493,7 @@ padding-left: 0.3em;
 text-align: center;
 font-size:0.9em;
 border-collapse: collapse;
+margin: 0 auto;
 }
 
 .my-background-table tr {

@@ -35,8 +35,6 @@
       <p id="intro-2"></p>
       <p id="intro-3"></p>
 
-      <ul id="learning-path"></ul>
-
       <p id="closing"></p>
 
       <br>
@@ -44,6 +42,19 @@
       <table class="my-background-table">
         <tbody id="background-items"></tbody>
       </table>
+
+      <br>
+      <h2 id="career-title" class="small-h1"></h2>
+      <ul id="career-items"></ul>
+
+      <h2 id="projects-title" class="small-h1"></h2>
+      <ul id="projects-items"></ul>
+
+      <h2 id="education-title" class="small-h1"></h2>
+      <ul id="education-items"></ul>
+
+      <h2 id="certifications-title" class="small-h1"></h2>
+      <ul id="certifications-items"></ul>
 
       <br>
       <h2 id="contact-title" class="small-h1"></h2>
@@ -104,14 +115,6 @@
       }
     });
 
-    const path = document.getElementById('learning-path');
-    path.innerHTML = '';
-    data.learningPath.forEach(function (item) {
-      const li = document.createElement('li');
-      li.textContent = item;
-      path.appendChild(li);
-    });
-
     document.getElementById('closing').textContent = data.closing;
 
     document.getElementById('background-title').textContent = data.background.title;
@@ -124,6 +127,11 @@
       tr.appendChild(td);
       background.appendChild(tr);
     });
+
+    renderListSection('career', data.experience.career);
+    renderListSection('projects', data.experience.projects);
+    renderListSection('education', data.experience.education);
+    renderListSection('certifications', data.experience.certifications);
 
     document.getElementById('contact-title').textContent = data.contact.title;
     document.getElementById('contact-desc').textContent = data.contact.desc;
@@ -139,6 +147,17 @@
     document.getElementById('footer-email-label').textContent = data.footer.emailLabel;
     document.getElementById('footer-email-value').textContent = data.contact.email;
     document.getElementById('footer-copyright').textContent = data.footer.copyright;
+  }
+
+  function renderListSection(prefix, section) {
+    document.getElementById(prefix + '-title').textContent = section.title;
+    const list = document.getElementById(prefix + '-items');
+    list.innerHTML = '';
+    section.items.forEach(function (item) {
+      const li = document.createElement('li');
+      li.textContent = item;
+      list.appendChild(li);
+    });
   }
 
   document.getElementById('switch-zh').addEventListener('click', function () {

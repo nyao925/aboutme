@@ -8,27 +8,69 @@
   },
   "heroTitle": "餃子大人について",
   "intro": [
-    "私の名前は餃子大人です。もちろん本名ではなく、ただ餃子が好きだからです。",
-    "学生時代の私は Python も Machine Learning も人工知能も分かりませんでした。仕事を始めてから長い独学の道を歩み、ネットで知識を共有してくれる方々に多く助けられました。だからこそ、私も学んだことを皆さんに共有したいと思うようになりました。",
-    "こうしてこのサイトが生まれました。ここにある内容は、私がネット上で探索・整理・独学してきた知識です。学習中によく間違える点や注意点もまとめて共有しています。",
-    "私の仕事は機械学習と人工知能に関係しているため、Numpy、Pandas、そして機械学習・深層学習のフレームワークをよく使います。だからこそ、ここで共有するのもまさにそれらの知識です。"
+    "こんにちは、餃子大人です。現在は日本で AI と企業システムに関わる技術業務に携わっています。",
+    "これまで DXC、Microsoft、IBM、FITEC で、クラウド基盤や自動化システム、エンタープライズアプリの設計と実装に取り組んできました。",
+    "スマートオフィス、製造業向け情報システム、AI 画像検査、クロスプラットフォーム開発などの経験を通じて、技術を業務価値につなげることを重視しています。",
+    "このサイトでは、学習と実務の中で実際に効果があった考え方や進め方を整理して共有しています。"
   ],
-  "learningPath": [
-    "まず、Python の基礎があることを前提に、Numpy と Pandas を学びます。これらはデータ処理と可視化にとても役立ちます。",
-    "次に、機械学習フレームワーク（例: scikit-learn）と簡単なデータセットを使って、最初の機械学習プログラムを書きます。",
-    "最後に、深層学習フレームワーク（例: TensorFlow）とより大きなデータセットを使って、最初の深層学習プログラムを書きます。"
-  ],
-  "closing": "間違いはあるかもしれませんし、完璧でもありません。でも成長の道では失敗を重ねることが大切です。Numpy & Pandas -> Machine Learning -> Deep Learning、これが私の学習ロードマップです。",
+  "closing": "技術の成長に近道はありません。学び続け、実装し続け、振り返り続けることが、私にとって最も確かな方法です。",
   "background": {
-    "title": "自己紹介 (DumplingsMajesty's Background)",
+    "title": "自己紹介 (Background)",
     "items": [
       "出身 : 中国 (China)",
       "現住所 : 東京, 日本",
       "学歴 : 修士",
-      "会社 : Fujitsu",
       "仕事内容 : 機械学習、深層学習、AI など",
       "趣味 : 旅行、ダイビング"
     ]
+  },
+  "experience": {
+    "career": {
+      "title": "職務経歴",
+      "items": [
+        "2023年9月 - 現在 DXC Technology Japan",
+        "2022年12月 - 2023年8月 日本マイクロソフト - PowerPlatform 技術支援、講師、技術サポート",
+        "2021年10月 - 2022年11月 日本IBM - EI-Core の開発、開発チームのサブリーダー",
+        "2017年4月 - 2021年9月 FITEC - AI、クラウド、工場自動化システム開発、複数案件でサブリーダーを担当"
+      ]
+    },
+    "projects": {
+      "title": "プロジェクト経験",
+      "items": [
+        "スマートオフィスシステム開発：クラウド基盤でスマートオフィスを開発し、AI アシスタントを統合して音声対話とタスク自動化を実現。",
+        "製造業向け情報システム開発：企業向け情報管理システムの開発に参加し、生産データ管理プロセスを最適化。",
+        "AI 画像検査システム：ディープラーニングを用いた画像検査システムを開発し、品質検査を自動化。",
+        "クロスプラットフォーム資産管理アプリ：PaaS/FaaS アーキテクチャで iOS、Android、Web、デスクトップ対応アプリを開発。"
+      ]
+    },
+    "education": {
+      "title": "学歴",
+      "items": [
+        "2014年4月 - 2016年9月 東京海洋大学大学院 - 海洋科学技術研究科 修士"
+      ]
+    },
+    "certifications": {
+      "title": "資格",
+      "items": [
+        "ServiceNow - IT Service Management",
+        "ServiceNow Certified Application Developer",
+        "ServiceNow 認定システム管理者",
+        "Microsoft Power Platform Solution Architect Expert",
+        "Microsoft Power Platform Developer Associate",
+        "Microsoft Power Platform App Maker Associate",
+        "Microsoft Power Platform Fundamentals",
+        "Microsoft Azure Developer Associate",
+        "Microsoft Azure AI Engineer Associate",
+        "Microsoft Azure Data Fundamentals",
+        "Microsoft Azure AI Fundamentals",
+        "Microsoft Azure Fundamentals",
+        "IBM Certified Advocate - Cloud v2",
+        "IBM Garage Essentials",
+        "Java SE 8 Programmer",
+        "Oracle Java Programmer Silver",
+        "ITIL Foundation Certification"
+      ]
+    }
   },
   "contact": {
     "title": "連絡先",

@@ -8,27 +8,69 @@
   },
   "heroTitle": "关于饺子大人",
   "intro": [
-    "我叫 饺子大人，当然这不是我的真名，只是因为我喜欢吃饺子而已。",
-    "学生时代的我，不懂 Python，不懂 Machine Learning，更不懂人工智能。工作后开始了我漫长的自学之路。我很欣赏网上那些默默奉献的人们，分享自己所学的东西给了我很大的帮助。所以我决定我也要像那些奉献的人们一样，将我的所学分享给大家。",
-    "于是乎，便有了这个网站。这个网站中的所有内容，都是我在网上探索、整理、自学而来的。再加上个人在学习过程中经常出错，以及需要注意的点，总结后分享给大家。",
-    "因为我的工作是跟机器学习、人工智能相关，所以经常使用 Numpy、Pandas 和一些机器学习、深度学习的框架。是的，所以我要分享的也正是这些知识。"
+    "你好，我是饺子大人，目前在日本从事 AI 与企业系统相关的技术工作。",
+    "我的职业经历覆盖 DXC、微软、IBM 与 FITEC，长期参与云平台、自动化系统与企业级应用的设计和落地。",
+    "这些年做过的项目包括智能办公系统、制造业信息系统、AI 视觉检测和跨平台应用开发，也让我更关注技术在真实业务中的价值。",
+    "我搭建这个站点，是希望把自己在学习和实战中验证过的方法整理出来，帮助更多同样在技术路上持续成长的人。"
   ],
-  "learningPath": [
-    "首先，我假设你对 Python 有了一定的了解，您需要了解的是 Numpy 和 Pandas，这两个库可以很好地帮助我们处理数据，以及可视化数据。",
-    "接下来，就可以使用机器学习的框架（例如：scikit-learn）和一些简单的数据集，写出我们的第一个机器学习程序了。",
-    "最后，再使用深度学习的框架（例如：TensorFlow）和一些较大的数据集，写出我们的第一个深度学习程序了。"
-  ],
-  "closing": "可能有错，当然不全，但按你胃（Anyway），成长的路上就是要不断地犯错。Numpy & Pandas -> Machine Learning -> Deep Learning，这是我的炼丹之道。",
+  "closing": "技术成长没有标准答案。持续学习、持续实践、持续复盘，才是我一路走到现在最有效的方法。",
   "background": {
-    "title": "关于我 (DumplingsMajesty's Background)",
+    "title": "关于我",
     "items": [
       "出生 : 中国 (China)",
       "现居住地 : 东京, 日本",
       "学历 : 硕士",
-      "公司 : Fujitsu",
       "工作内容 : 机器学习，深度学习，AI 等等",
       "兴趣爱好 : 旅游，潜水"
     ]
+  },
+  "experience": {
+    "career": {
+      "title": "履历",
+      "items": [
+        "2023年9月 - 至今 DXC Technology Japan",
+        "2022年12月 - 2023年8月 日本微软 - 负责 PowerPlatform 技术支持、讲师和技术支援",
+        "2021年10月 - 2022年11月 日本IBM - 负责 EI-Core 的开发，担任开发团队的副负责人",
+        "2017年4月 - 2021年9月 FITEC - 负责 AI、云计算及工厂自动化系统开发，曾担任多个项目的副负责人"
+      ]
+    },
+    "projects": {
+      "title": "项目经历",
+      "items": [
+        "智能办公系统开发：基于云平台开发智能办公系统，整合 AI 助手，实现语音交互和任务自动化。",
+        "制造业信息系统开发：参与企业级信息管理系统的开发，优化生产数据管理流程。",
+        "AI 视觉检测系统：利用深度学习技术开发视觉检测系统，实现产品质量自动化检测。",
+        "跨平台物品管理应用：基于 PaaS/FaaS 架构开发跨平台移动应用，支持 iOS、Android、Web 和桌面端。"
+      ]
+    },
+    "education": {
+      "title": "学习经历",
+      "items": [
+        "2014年4月 - 2016年9月 东京海洋大学大学院 - 海洋科学技術研究科 硕士"
+      ]
+    },
+    "certifications": {
+      "title": "职业证书",
+      "items": [
+        "ServiceNow - IT Service Management",
+        "ServiceNow Certified Application Developer",
+        "ServiceNow 系统管理者",
+        "Microsoft Power Platform Solution Architect Expert",
+        "Microsoft Power Platform Developer Associate",
+        "Microsoft Power Platform App Maker Associate",
+        "Microsoft Power Platform Fundamentals",
+        "Microsoft Azure Developer Associate",
+        "Microsoft Azure AI Engineer Associate",
+        "Microsoft Azure Data Fundamentals",
+        "Microsoft Azure AI Fundamentals",
+        "Microsoft Azure Fundamentals",
+        "IBM Certified Advocate - Cloud v2",
+        "IBM Garage Essentials",
+        "Java SE 8 Programmer",
+        "Oracle Java Programmer Silver",
+        "ITIL Foundation Certification"
+      ]
+    }
   },
   "contact": {
     "title": "联系我",
