@@ -13,7 +13,6 @@
   <nav id="home-nav">
     <ul>
       <li><a class="nav-home" href="/"><strong id="brand-name">饺子大人</strong></a></li>
-      <li><a id="nav-github" href="https://github.com/DumplingsMajesty" target="_blank">GitHub</a></li>
       <li style="float:right; margin-right:10px; margin-top:8px;">
         <button type="button" id="switch-zh">中文</button>
         <button type="button" id="switch-ja">日本語</button>
@@ -35,13 +34,13 @@
       <p id="intro-2"></p>
       <p id="intro-3"></p>
 
-      <p id="closing"></p>
+      <h2 id="positioning-title" class="small-h1"></h2>
+      <p id="positioning-summary"></p>
 
-      <br>
-      <h2 id="background-title" class="small-h1"></h2>
-      <table class="my-background-table">
-        <tbody id="background-items"></tbody>
-      </table>
+      <h2 id="skills-title" class="small-h1"></h2>
+      <div id="skills-groups"></div>
+
+      <p id="closing"></p>
 
       <br>
       <h2 id="career-title" class="small-h1"></h2>
@@ -80,6 +79,7 @@
 <footer>
   <br>
   <p><strong id="footer-email-label">Email:</strong> <span id="footer-email-value"></span></p>
+  <p><strong id="footer-updated-label"></strong> <span id="footer-updated-value"></span></p>
   <p id="footer-copyright"></p>
 </footer>
 
@@ -103,7 +103,6 @@
     document.title = data.metaTitle;
 
     document.getElementById('brand-name').textContent = data.brandName;
-    document.getElementById('nav-github').textContent = data.navGithub;
     document.getElementById('switch-zh').textContent = data.langSwitch.zh;
     document.getElementById('switch-ja').textContent = data.langSwitch.ja;
     document.getElementById('hero-title').textContent = data.heroTitle;
@@ -115,18 +114,13 @@
       }
     });
 
-    document.getElementById('closing').textContent = data.closing;
+    document.getElementById('positioning-title').textContent = data.positioning.title;
+    document.getElementById('positioning-summary').textContent = data.positioning.summary;
 
-    document.getElementById('background-title').textContent = data.background.title;
-    const background = document.getElementById('background-items');
-    background.innerHTML = '';
-    data.background.items.forEach(function (item) {
-      const tr = document.createElement('tr');
-      const td = document.createElement('td');
-      td.textContent = item;
-      tr.appendChild(td);
-      background.appendChild(tr);
-    });
+    document.getElementById('skills-title').textContent = data.skills.title;
+    renderSkillGroups(data.skills.groups);
+
+    document.getElementById('closing').textContent = data.closing;
 
     renderListSection('career', data.experience.career);
     renderListSection('projects', data.experience.projects);
@@ -146,6 +140,8 @@
 
     document.getElementById('footer-email-label').textContent = data.footer.emailLabel;
     document.getElementById('footer-email-value').textContent = data.contact.email;
+    document.getElementById('footer-updated-label').textContent = data.footer.lastUpdatedLabel;
+    document.getElementById('footer-updated-value').textContent = data.footer.lastUpdated;
     document.getElementById('footer-copyright').textContent = data.footer.copyright;
   }
 
@@ -157,6 +153,19 @@
       const li = document.createElement('li');
       li.textContent = item;
       list.appendChild(li);
+    });
+  }
+
+  function renderSkillGroups(groups) {
+    const wrapper = document.getElementById('skills-groups');
+    wrapper.innerHTML = '';
+    groups.forEach(function (group) {
+      const p = document.createElement('p');
+      const title = document.createElement('strong');
+      title.textContent = group.name + ': ';
+      p.appendChild(title);
+      p.appendChild(document.createTextNode(group.items.join(' / ')));
+      wrapper.appendChild(p);
     });
   }
 

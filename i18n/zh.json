@@ -8,22 +8,37 @@
   },
   "heroTitle": "关于饺子大人",
   "intro": [
-    "你好，我是饺子大人，目前在日本从事 AI 与企业系统相关的技术工作。",
+    "你好，我是饺子大人，出生于中国，目前常住东京，在日本从事 AI 与企业系统相关的技术工作。",
     "我的职业经历覆盖 DXC、微软、IBM 与 FITEC，长期参与云平台、自动化系统与企业级应用的设计和落地。",
-    "这些年做过的项目包括智能办公系统、制造业信息系统、AI 视觉检测和跨平台应用开发，也让我更关注技术在真实业务中的价值。",
-    "我搭建这个站点，是希望把自己在学习和实战中验证过的方法整理出来，帮助更多同样在技术路上持续成长的人。"
+    "我拥有硕士学历，工作方向聚焦机器学习、深度学习与 AI 工程化落地。",
+    "这些年做过的项目包括智能办公系统、制造业信息系统、AI 视觉检测和跨平台应用开发，也让我更关注技术在真实业务中的价值。工作之外，我也喜欢旅游和潜水。"
   ],
-  "closing": "技术成长没有标准答案。持续学习、持续实践、持续复盘，才是我一路走到现在最有效的方法。",
-  "background": {
-    "title": "关于我",
-    "items": [
-      "出生 : 中国 (China)",
-      "现居住地 : 东京, 日本",
-      "学历 : 硕士",
-      "工作内容 : 机器学习，深度学习，AI 等等",
-      "兴趣爱好 : 旅游，潜水"
+  "positioning": {
+    "title": "个人定位",
+    "summary": "专注 AI 与企业系统落地，擅长把云平台、自动化与业务场景结合，交付可持续迭代的解决方案。"
+  },
+  "skills": {
+    "title": "技术栈",
+    "groups": [
+      {
+        "name": "编程语言",
+        "items": ["Python", "Java", "JavaScript", "C#"]
+      },
+      {
+        "name": "云与平台",
+        "items": ["Azure", "AWS", "Power Platform", "ServiceNow"]
+      },
+      {
+        "name": "AI / 数据",
+        "items": ["TensorFlow", "PyTorch", "OpenAI API", "机器学习"]
+      },
+      {
+        "name": "企业开发",
+        "items": ["Oracle APEX", "Spring", "React", "Angular"]
+      }
     ]
   },
+  "closing": "技术成长没有标准答案。持续学习、持续实践、持续复盘，才是我一路走到现在最有效的方法。",
   "experience": {
     "career": {
       "title": "履历",
@@ -86,6 +101,8 @@
   },
   "footer": {
     "emailLabel": "Email:",
+    "lastUpdatedLabel": "Last Updated:",
+    "lastUpdated": "2026-04-30",
     "copyright": "© 2020 DumplingsMajesty.github.io All Rights Reserved"
   }
 }
