@@ -30,6 +30,12 @@ python3 -m http.server 8000
 
 然后访问：http://localhost:8000
 
+停止本地服务器：
+
+```bash
+Ctrl + C
+```
+
 ## 部署
 
 可直接部署到 GitHub Pages。
