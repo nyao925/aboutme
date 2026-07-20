@@ -1,0 +1,110 @@
+{
+  "metaTitle": "About Me | Dumplings Majesty",
+  "brandName": "Dumplings Majesty",
+  "navGithub": "GitHub",
+  "langSwitch": {
+    "zh": "中文",
+    "ja": "日本語",
+    "en": "English"
+  },
+  "heroTitle": "About Dumplings Majesty",
+  "intro": [
+    "Hi, I'm Dumplings Majesty — born in China, currently based in Tokyo, working on AI and enterprise systems in Japan.",
+    "My career spans DXC, Microsoft, IBM, and FITEC, where I've worked extensively on cloud platforms, automation systems, and the design and delivery of enterprise applications.",
+    "I hold a master's degree and focus on machine learning, deep learning, and applied AI engineering.",
+    "Over the years I've worked on smart office systems, manufacturing information systems, AI-based visual inspection, and cross-platform app development — all of which sharpened my focus on how technology creates real business value. Outside of work, I enjoy traveling and diving."
+  ],
+  "positioning": {
+    "title": "Positioning",
+    "summary": "Focused on applying AI and enterprise systems in practice, bridging cloud platforms, automation, and business needs to deliver solutions that scale and evolve."
+  },
+  "skills": {
+    "title": "Tech Stack",
+    "groups": [
+      {
+        "name": "Languages",
+        "items": ["Python", "Java", "JavaScript", "C#"]
+      },
+      {
+        "name": "Cloud & Platforms",
+        "items": ["Azure", "AWS", "Power Platform", "ServiceNow"]
+      },
+      {
+        "name": "AI / Data",
+        "items": ["TensorFlow", "PyTorch", "OpenAI API", "Machine Learning"]
+      },
+      {
+        "name": "Enterprise Development",
+        "items": ["Oracle APEX", "Spring", "React", "Angular"]
+      }
+    ]
+  },
+  "closing": "There's no shortcut to technical growth — continuous learning, continuous practice, and continuous reflection are what actually work.",
+  "experience": {
+    "career": {
+      "title": "Career",
+      "items": [
+        "Sep 2023 - Present, DXC Technology Japan",
+        "Dec 2022 - Aug 2023, Microsoft Japan — PowerPlatform technical support, training, and enablement",
+        "Oct 2021 - Nov 2022, IBM Japan — Developed EI-Core, served as deputy lead of the development team",
+        "Apr 2017 - Sep 2021, FITEC — AI, cloud computing, and factory automation systems development; deputy lead on multiple projects"
+      ]
+    },
+    "projects": {
+      "title": "Project Experience",
+      "items": [
+        "Smart Office System: Built a cloud-based smart office system integrating an AI assistant for voice interaction and task automation.",
+        "Manufacturing Information System: Contributed to an enterprise information management system, optimizing production data workflows.",
+        "AI Visual Inspection System: Developed a deep learning-based visual inspection system for automated product quality checks.",
+        "Cross-Platform Asset Management App: Built a cross-platform app on a PaaS/FaaS architecture, supporting iOS, Android, Web, and desktop."
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "items": [
+        "Apr 2014 - Sep 2016, Tokyo University of Marine Science and Technology — Graduate School of Marine Science and Technology, Master's degree"
+      ]
+    },
+    "certifications": {
+      "title": "Certifications",
+      "items": [
+        "ServiceNow - IT Service Management",
+        "ServiceNow Certified Application Developer",
+        "ServiceNow Certified System Administrator",
+        "Microsoft Power Platform Solution Architect Expert",
+        "Microsoft Power Platform Developer Associate",
+        "Microsoft Power Platform App Maker Associate",
+        "Microsoft Power Platform Fundamentals",
+        "Microsoft Azure Developer Associate",
+        "Microsoft Azure AI Engineer Associate",
+        "Microsoft Azure Data Fundamentals",
+        "Microsoft Azure AI Fundamentals",
+        "Microsoft Azure Fundamentals",
+        "IBM Certified Advocate - Cloud v2",
+        "IBM Garage Essentials",
+        "Java SE 8 Programmer",
+        "Oracle Java Programmer Silver",
+        "ITIL Foundation Certification",
+        "Github Copilot (GH300)"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "desc": "There are many ways to reach me — feel free to leave a message through any of them. I'll do my best to reply when I have time. Here are a few ways to get in touch:",
+    "labels": {
+      "email": "Email:",
+      "github": "Github:",
+      "qq": "QQ:"
+    },
+    "email": "dumplings.majesty@gmail.com",
+    "github": "https://github.com/DumplingsMajesty",
+    "qq": "107614538"
+  },
+  "footer": {
+    "emailLabel": "Email:",
+    "lastUpdatedLabel": "Last Updated:",
+    "lastUpdated": "2026-04-30",
+    "copyright": "© 2020 DumplingsMajesty.github.io All Rights Reserved"
+  }
+}

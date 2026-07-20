@@ -16,6 +16,7 @@
       <li style="float:right; margin-right:10px; margin-top:8px;">
         <button type="button" id="switch-zh">中文</button>
         <button type="button" id="switch-ja">日本語</button>
+        <button type="button" id="switch-en">English</button>
       </li>
     </ul>
   </nav>
@@ -99,12 +100,13 @@
   }
 
   function applyLocale(data, lang) {
-    document.documentElement.lang = lang === 'ja' ? 'ja' : 'zh-CN';
+    document.documentElement.lang = lang === 'ja' ? 'ja' : (lang === 'en' ? 'en' : 'zh-CN');
     document.title = data.metaTitle;
 
     document.getElementById('brand-name').textContent = data.brandName;
     document.getElementById('switch-zh').textContent = data.langSwitch.zh;
     document.getElementById('switch-ja').textContent = data.langSwitch.ja;
+    document.getElementById('switch-en').textContent = data.langSwitch.en;
     document.getElementById('hero-title').textContent = data.heroTitle;
 
     data.intro.forEach(function (line, index) {
@@ -175,6 +177,10 @@
 
   document.getElementById('switch-ja').addEventListener('click', function () {
     loadLocale('ja');
+  });
+
+  document.getElementById('switch-en').addEventListener('click', function () {
+    loadLocale('en');
   });
 
   const initLang = localStorage.getItem('aboutme-lang') || 'zh';
