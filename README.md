@@ -1,12 +1,13 @@
 # aboutme
 
-个人介绍静态网站，支持中文和日文两种语言切换。
+个人介绍静态网站，支持中文、日文和英文三种语言切换。
 
 ## 项目结构
 
 - index.html: 页面入口，负责渲染内容与语言切换
 - i18n/zh.json: 中文文案
 - i18n/ja.json: 日文文案
+- i18n/en.json: 英文文案
 - stylesheets/page-style.css: 页面样式
 - static/img/description/my_pic.PNG: 头像图片
 
@@ -16,8 +17,9 @@
 
 - i18n/zh.json
 - i18n/ja.json
+- i18n/en.json
 
-如果需要新增字段，请在两个语言文件中保持同样的 key 结构。
+如果需要新增字段，请在三个语言文件中保持同样的 key 结构。
 
 ## 本地预览
 
