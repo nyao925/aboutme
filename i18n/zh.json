@@ -27,7 +27,7 @@
       },
       {
         "name": "AI / 数据",
-        "items": ["TensorFlow", "PyTorch", "OpenAI API", "机器学习"]
+        "items": ["TensorFlow", "PyTorch", "机器学习"]
       },
       {
         "name": "企业开发",

@@ -27,7 +27,7 @@
       },
       {
         "name": "AI / Data",
-        "items": ["TensorFlow", "PyTorch", "OpenAI API", "Machine Learning"]
+        "items": ["TensorFlow", "PyTorch", "Machine Learning"]
       },
       {
         "name": "Enterprise Development",
