@@ -13,10 +13,16 @@
   <nav id="home-nav">
     <ul>
       <li><a class="nav-home" href="/"><strong id="brand-name">饺子大人</strong></a></li>
+      <li class="has-submenu">
+        <a href="javascript:void(0)" id="nav-personal-projects"></a>
+        <ul id="personal-projects-submenu" class="submenu"></ul>
+      </li>
       <li style="float:right; margin-right:10px; margin-top:8px;">
-        <button type="button" id="switch-zh">中文</button>
-        <button type="button" id="switch-ja">日本語</button>
-        <button type="button" id="switch-en">English</button>
+        <select id="lang-select">
+          <option value="zh" id="switch-zh">中文</option>
+          <option value="ja" id="switch-ja">日本語</option>
+          <option value="en" id="switch-en">English</option>
+        </select>
       </li>
     </ul>
   </nav>
@@ -34,9 +40,6 @@
       <p id="intro-1"></p>
       <p id="intro-2"></p>
       <p id="intro-3"></p>
-
-      <h2 id="positioning-title" class="small-h1"></h2>
-      <p id="positioning-summary"></p>
 
       <h2 id="skills-title" class="small-h1"></h2>
       <div id="skills-groups"></div>
@@ -116,9 +119,6 @@
       }
     });
 
-    document.getElementById('positioning-title').textContent = data.positioning.title;
-    document.getElementById('positioning-summary').textContent = data.positioning.summary;
-
     document.getElementById('skills-title').textContent = data.skills.title;
     renderSkillGroups(data.skills.groups);
 
@@ -126,6 +126,10 @@
 
     renderListSection('career', data.experience.career);
     renderListSection('projects', data.experience.projects);
+
+    document.getElementById('nav-personal-projects').textContent = data.experience.personalProjects.title;
+    renderPersonalProjectsMenu(data.experience.personalProjects.items);
+
     renderListSection('education', data.experience.education);
     renderListSection('certifications', data.experience.certifications);
 
@@ -171,19 +175,25 @@
     });
   }
 
-  document.getElementById('switch-zh').addEventListener('click', function () {
-    loadLocale('zh');
-  });
+  function renderPersonalProjectsMenu(items) {
+    const submenu = document.getElementById('personal-projects-submenu');
+    submenu.innerHTML = '';
+    items.forEach(function (project) {
+      const li = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = 'project.html?id=' + encodeURIComponent(project.id);
+      link.textContent = project.name;
+      li.appendChild(link);
+      submenu.appendChild(li);
+    });
+  }
 
-  document.getElementById('switch-ja').addEventListener('click', function () {
-    loadLocale('ja');
-  });
-
-  document.getElementById('switch-en').addEventListener('click', function () {
-    loadLocale('en');
+  document.getElementById('lang-select').addEventListener('change', function () {
+    loadLocale(this.value);
   });
 
   const initLang = localStorage.getItem('aboutme-lang') || 'zh';
+  document.getElementById('lang-select').value = initLang;
   loadLocale(initLang);
 </script>
 

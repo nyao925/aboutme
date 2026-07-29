@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>项目详情</title>
+  <link href="./stylesheets/page-style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <nav id="home-nav">
+    <ul>
+      <li><a class="nav-home" href="/"><strong id="brand-name">饺子大人</strong></a></li>
+      <li class="has-submenu">
+        <a href="javascript:void(0)" id="nav-personal-projects"></a>
+        <ul id="personal-projects-submenu" class="submenu"></ul>
+      </li>
+      <li style="float:right; margin-right:10px; margin-top:8px;">
+        <select id="lang-select">
+          <option value="zh" id="switch-zh">中文</option>
+          <option value="ja" id="switch-ja">日本語</option>
+          <option value="en" id="switch-en">English</option>
+        </select>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1 id="hero-title" style="padding:0; margin:0;"></h1>
+  <div class="section ie-size">
+    <div class="pad-main">
+      <div id="project-not-found" style="display:none;">
+        <p id="project-not-found-text"></p>
+        <p><a href="/" id="project-back-home"></a></p>
+      </div>
+      <div id="project-detail" class="project-detail" style="display:none;"></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <br>
+  <p><strong id="footer-email-label">Email:</strong> <span id="footer-email-value"></span></p>
+  <p><strong id="footer-updated-label"></strong> <span id="footer-updated-value"></span></p>
+  <p id="footer-copyright"></p>
+</footer>
+
+<script>
+  async function loadLocale(lang) {
+    try {
+      const res = await fetch('./i18n/' + lang + '.json');
+      if (!res.ok) {
+        throw new Error('Failed to load locale: ' + lang);
+      }
+      const data = await res.json();
+      applyLocale(data, lang);
+      localStorage.setItem('aboutme-lang', lang);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  function getProjectId() {
+    return new URLSearchParams(window.location.search).get('id');
+  }
+
+  function applyLocale(data, lang) {
+    document.documentElement.lang = lang === 'ja' ? 'ja' : (lang === 'en' ? 'en' : 'zh-CN');
+
+    document.getElementById('brand-name').textContent = data.brandName;
+    document.getElementById('switch-zh').textContent = data.langSwitch.zh;
+    document.getElementById('switch-ja').textContent = data.langSwitch.ja;
+    document.getElementById('switch-en').textContent = data.langSwitch.en;
+
+    document.getElementById('nav-personal-projects').textContent = data.experience.personalProjects.title;
+    renderPersonalProjectsMenu(data.experience.personalProjects.items);
+
+    document.getElementById('footer-email-label').textContent = data.footer.emailLabel;
+    document.getElementById('footer-email-value').textContent = data.contact.email;
+    document.getElementById('footer-updated-label').textContent = data.footer.lastUpdatedLabel;
+    document.getElementById('footer-updated-value').textContent = data.footer.lastUpdated;
+    document.getElementById('footer-copyright').textContent = data.footer.copyright;
+
+    const projectId = getProjectId();
+    const project = data.experience.personalProjects.items.find(function (item) {
+      return item.id === projectId;
+    });
+
+    if (project) {
+      document.title = project.name + ' | ' + data.brandName;
+      document.getElementById('hero-title').textContent = project.name;
+      renderProjectDetail(project);
+    } else {
+      document.title = data.metaTitle;
+      document.getElementById('hero-title').textContent = data.experience.personalProjects.title;
+      document.getElementById('project-not-found').style.display = 'block';
+      document.getElementById('project-detail').style.display = 'none';
+      document.getElementById('project-not-found-text').textContent = lang === 'ja'
+        ? 'プロジェクトが見つかりませんでした。'
+        : (lang === 'en' ? 'Project not found.' : '未找到该项目。');
+      document.getElementById('project-back-home').textContent = lang === 'ja'
+        ? 'トップページに戻る'
+        : (lang === 'en' ? 'Back to home' : '返回首页');
+    }
+  }
+
+  function renderPersonalProjectsMenu(items) {
+    const submenu = document.getElementById('personal-projects-submenu');
+    submenu.innerHTML = '';
+    items.forEach(function (project) {
+      const li = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = 'project.html?id=' + encodeURIComponent(project.id);
+      link.textContent = project.name;
+      li.appendChild(link);
+      submenu.appendChild(li);
+    });
+  }
+
+  function renderProjectDetail(project) {
+    const detail = document.getElementById('project-detail');
+    document.getElementById('project-not-found').style.display = 'none';
+    detail.style.display = 'block';
+    detail.innerHTML = '';
+
+    const header = document.createElement('div');
+    header.className = 'project-detail-header';
+
+    const title = document.createElement('h3');
+    title.className = 'project-detail-title';
+    title.textContent = project.name;
+    header.appendChild(title);
+
+    if (project.link) {
+      const link = document.createElement('a');
+      link.className = 'project-card-link';
+      link.href = project.link;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.textContent = 'GitHub';
+      header.appendChild(link);
+    }
+    detail.appendChild(header);
+
+    const tags = document.createElement('div');
+    tags.className = 'project-card-tags';
+    project.tags.forEach(function (tag) {
+      const span = document.createElement('span');
+      span.className = 'project-card-tag';
+      span.textContent = tag;
+      tags.appendChild(span);
+    });
+    detail.appendChild(tags);
+
+    project.detail.intro.forEach(function (paragraph) {
+      const p = document.createElement('p');
+      p.className = 'project-detail-text';
+      p.textContent = paragraph;
+      detail.appendChild(p);
+    });
+
+    const topicsList = document.createElement('ul');
+    topicsList.className = 'project-detail-topics';
+    project.detail.topics.forEach(function (topic) {
+      const li = document.createElement('li');
+      li.textContent = topic;
+      topicsList.appendChild(li);
+    });
+    detail.appendChild(topicsList);
+  }
+
+  document.getElementById('lang-select').addEventListener('change', function () {
+    loadLocale(this.value);
+  });
+
+  const initLang = localStorage.getItem('aboutme-lang') || 'zh';
+  document.getElementById('lang-select').value = initLang;
+  loadLocale(initLang);
+</script>
+
+</body>
+</html>
