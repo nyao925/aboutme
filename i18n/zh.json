@@ -60,7 +60,7 @@
       "items": [
         {
           "id": "python-numpy",
-          "name": "Python-Numpy",
+          "name": "Numpy",
           "tags": ["Python", "NumPy"],
           "link": "https://github.com/NYao925/Python-Numpy",
           "detail": {
