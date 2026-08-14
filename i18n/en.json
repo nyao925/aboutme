@@ -202,17 +202,21 @@
           "tags": ["Python", "requests", "BeautifulSoup"],
           "detail": {
             "intro": [
-              "My kid is learning Japanese kanji, and we often use kanji practice worksheet PDFs from sites like print-kids.net — but clicking through and downloading them one by one got tedious, so I wrote a small tool that grabs every PDF linked from a given practice page in one go.",
-              "It parses a, iframe, embed, and object tags on the page to find PDF links, and falls back to scanning the raw HTML with a regex for any links a script generated dynamically that the tag parser misses. Filenames are auto-generated from the Japanese label text next to each link, with invalid characters stripped out.",
-              "The default target page is a 2nd-grade kanji review sheet, but you can pass any other print-kids.net practice page URL as a command-line argument, so it's easy to reuse for different grades or topics."
+              "My kid is learning Japanese kanji, and we often use kanji practice worksheet PDFs from sites like print-kids.net — a single page can have dozens of PDF links, and clicking through and downloading them one by one got tedious, so I wrote a small tool that grabs every PDF linked from a given practice page in one go.",
+              "The link-finding part walks a, iframe, embed, and object tags on the page and collects any whose href/src/data attribute points to a .pdf file. For links a script generated dynamically that aren't caught by a tag attribute, it falls back to scanning the raw HTML with a regex so fewer links slip through.",
+              "Each filename is built primarily from the visible label text next to the link (stripping the trailing \"ダウンロード\" that commonly appears), falling back to the title attribute, and finally to the filename from the URL path if neither is available. The generated name is then sanitized to strip out characters the filesystem won't allow, so saving never fails on a bad character.",
+              "Downloads are streamed to disk in chunks rather than loading a whole file into memory at once. If a file with the same name already exists it's skipped automatically, so re-running the script never re-downloads anything and an interrupted run can just be resumed; it also prints progress (\"N of M\") as it goes.",
+              "The default target page is a 2nd-grade kanji review sheet, but you can pass any other print-kids.net practice page URL as a command-line argument, so it's easy to reuse for different grades or topics — I've already used it to pull down over 280 practice PDFs and print them out for my kid."
             ],
             "topics": [
-              "Automatically extracts PDF links from a, iframe, embed, and object tags on the target page",
+              "Automatically extracts PDF links by scanning the href/src/data attributes of a, iframe, embed, and object tags on the target page",
               "Falls back to a regex scan of the raw HTML to catch script-generated links the tag parser misses",
-              "Auto-generates filenames from the Japanese label text next to each link, stripping invalid characters",
-              "Skips files that were already downloaded, avoiding duplicate downloads",
+              "Builds filenames from the link's visible text (stripping a trailing \"ダウンロード\"), falling back to the title attribute and then the URL path's filename",
+              "Sanitizes generated filenames, stripping characters the filesystem doesn't allow",
+              "Skips files that were already downloaded, so re-runs and resumed downloads never duplicate work",
+              "Streams downloads to disk in chunks and prints progress (\"N of M\") as it runs",
               "Accepts any print-kids.net practice page URL via a command-line argument, not just the default 2nd-grade kanji page",
-              "Reuses connections with a requests.Session, with SSL certificate verification issues worked around"
+              "Reuses a requests.Session when fetching the target page, with SSL certificate verification issues worked around for local environments"
             ]
           }
         }
