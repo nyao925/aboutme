@@ -195,6 +195,26 @@
               "81_Checking how corr() behaves with mixed dtypes and plotting the result with seaborn.heatmap() (including a house-price dataset example)"
             ]
           }
+        },
+        {
+          "id": "print-kids-kanji-downloader",
+          "name": "Kanji PDF Downloader",
+          "tags": ["Python", "requests", "BeautifulSoup"],
+          "detail": {
+            "intro": [
+              "My kid is learning Japanese kanji, and we often use kanji practice worksheet PDFs from sites like print-kids.net — but clicking through and downloading them one by one got tedious, so I wrote a small tool that grabs every PDF linked from a given practice page in one go.",
+              "It parses a, iframe, embed, and object tags on the page to find PDF links, and falls back to scanning the raw HTML with a regex for any links a script generated dynamically that the tag parser misses. Filenames are auto-generated from the Japanese label text next to each link, with invalid characters stripped out.",
+              "The default target page is a 2nd-grade kanji review sheet, but you can pass any other print-kids.net practice page URL as a command-line argument, so it's easy to reuse for different grades or topics."
+            ],
+            "topics": [
+              "Automatically extracts PDF links from a, iframe, embed, and object tags on the target page",
+              "Falls back to a regex scan of the raw HTML to catch script-generated links the tag parser misses",
+              "Auto-generates filenames from the Japanese label text next to each link, stripping invalid characters",
+              "Skips files that were already downloaded, avoiding duplicate downloads",
+              "Accepts any print-kids.net practice page URL via a command-line argument, not just the default 2nd-grade kanji page",
+              "Reuses connections with a requests.Session, with SSL certificate verification issues worked around"
+            ]
+          }
         }
       ]
     },
