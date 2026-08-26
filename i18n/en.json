@@ -217,7 +217,16 @@
               "Streams downloads to disk in chunks and prints progress (\"N of M\") as it runs",
               "Accepts any print-kids.net practice page URL via a command-line argument, not just the default 2nd-grade kanji page",
               "Reuses a requests.Session when fetching the target page, with SSL certificate verification issues worked around for local environments"
-            ]
+            ],
+            "usage": {
+              "title": "Usage",
+              "steps": [
+                "Install dependencies: pip install -r requirements.txt (requires requests and beautifulsoup4)",
+                "Run python download_kanji_pdfs.py directly to download every PDF from the default page (a 2nd-grade kanji review sheet)",
+                "To download a different grade or topic, pass the target page URL as an argument, e.g.: python download_kanji_pdfs.py https://print-kids.net/print/kokugo/1nensei-kanji1/",
+                "Downloaded PDFs are saved to the downloads/ folder; progress is printed as it runs, and re-running the script never re-downloads files that already exist"
+              ]
+            }
           }
         }
       ]

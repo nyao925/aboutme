@@ -173,6 +173,22 @@
       topicsList.appendChild(li);
     });
     detail.appendChild(topicsList);
+
+    if (project.detail.usage) {
+      const usageTitle = document.createElement('h4');
+      usageTitle.className = 'project-detail-subtitle';
+      usageTitle.textContent = project.detail.usage.title;
+      detail.appendChild(usageTitle);
+
+      const usageList = document.createElement('ol');
+      usageList.className = 'project-detail-usage';
+      project.detail.usage.steps.forEach(function (step) {
+        const li = document.createElement('li');
+        li.textContent = step;
+        usageList.appendChild(li);
+      });
+      detail.appendChild(usageList);
+    }
   }
 
   document.getElementById('lang-select').addEventListener('change', function () {

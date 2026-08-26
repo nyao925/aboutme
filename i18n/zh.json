@@ -217,7 +217,16 @@
               "下载时按 chunk 流式写入磁盘，并打印当前进度（第几个/共几个）",
               "支持通过命令行参数指定任意 print-kids.net 练习页面，不局限于默认的二年级汉字页面",
               "读取目标页面时使用 requests.Session 复用连接，并对本地环境的 SSL 证书校验问题做了兼容处理"
-            ]
+            ],
+            "usage": {
+              "title": "使用方法",
+              "steps": [
+                "安装依赖：pip install -r requirements.txt（用到 requests 和 beautifulsoup4）",
+                "直接运行 python download_kanji_pdfs.py，默认会下载二年级汉字总复习页面里的所有 PDF",
+                "如果想下载其他年级或类型的练习题，把目标页面的 URL 作为参数传进去，例如：python download_kanji_pdfs.py https://print-kids.net/print/kokugo/1nensei-kanji1/",
+                "下载好的 PDF 会保存在 downloads/ 文件夹里，运行过程中会打印下载进度，重复运行也不会重复下载已有文件"
+              ]
+            }
           }
         }
       ]

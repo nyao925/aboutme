@@ -426,6 +426,23 @@ margin: 0.6em 0 0 0;
 margin-bottom: 0.3em;
 }
 
+.project-detail-subtitle {
+font-size: 0.95em;
+color: #191818;
+margin: 1em 0 0.4em 0;
+}
+
+.project-detail-usage {
+font-size: 0.85em;
+color: #444;
+padding-left: 1.2em;
+margin: 0.6em 0 0 0;
+}
+
+.project-detail-usage li {
+margin-bottom: 0.3em;
+}
+
 
 /* ====== main body ====== */
 main {

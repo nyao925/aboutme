@@ -217,7 +217,16 @@
               "チャンク単位でストリーミングダウンロードし、実行中に進捗（何個中何個目）を表示",
               "コマンドライン引数で任意の print-kids.net 練習ページを指定可能（デフォルトの2年生漢字ページに限定されない）",
               "対象ページの取得には requests.Session でコネクションを再利用し、ローカル環境のSSL証明書検証の問題にも対応"
-            ]
+            ],
+            "usage": {
+              "title": "使い方",
+              "steps": [
+                "依存パッケージをインストール：pip install -r requirements.txt（requests と beautifulsoup4 を使用）",
+                "そのまま python download_kanji_pdfs.py を実行すると、デフォルトで小学2年生の漢字まとめページのPDFを一括ダウンロード",
+                "別の学年・単元の練習ページをダウンロードしたい場合は、対象ページのURLを引数として渡す。例：python download_kanji_pdfs.py https://print-kids.net/print/kokugo/1nensei-kanji1/",
+                "ダウンロードしたPDFは downloads/ フォルダに保存され、実行中は進捗が表示される。すでにあるファイルは再実行しても重複ダウンロードされない"
+              ]
+            }
           }
         }
       ]
