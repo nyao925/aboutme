@@ -200,6 +200,7 @@
           "id": "print-kids-kanji-downloader",
           "name": "Kanji PDF Downloader",
           "tags": ["Python", "requests", "BeautifulSoup"],
+          "link": "https://github.com/nyao925/print-kids-kanji-downloader",
           "detail": {
             "intro": [
               "My kid is learning Japanese kanji, and we often use kanji practice worksheet PDFs from sites like print-kids.net — a single page can have dozens of PDF links, and clicking through and downloading them one by one got tedious, so I wrote a small tool that grabs every PDF linked from a given practice page in one go.",

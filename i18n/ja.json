@@ -200,6 +200,7 @@
           "id": "print-kids-kanji-downloader",
           "name": "漢字プリントPDFダウンローダー",
           "tags": ["Python", "requests", "BeautifulSoup"],
+          "link": "https://github.com/nyao925/print-kids-kanji-downloader",
           "detail": {
             "intro": [
               "子供が日本語の漢字を勉強していて、print-kids.net のようなサイトの漢字練習プリントPDFをよく使うのですが、1ページに何十個もPDFリンクがあり、1枚ずつクリックしてダウンロードするのが面倒だったので、あるページ内のPDFリンクをまとめて一括ダウンロードする小さなツールを作りました。",

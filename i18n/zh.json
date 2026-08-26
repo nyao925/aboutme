@@ -200,6 +200,7 @@
           "id": "print-kids-kanji-downloader",
           "name": "汉字练习PDF下载器",
           "tags": ["Python", "requests", "BeautifulSoup"],
+          "link": "https://github.com/nyao925/print-kids-kanji-downloader",
           "detail": {
             "intro": [
               "因为家里孩子在学日语汉字，日常会用到 print-kids.net 这类网站上的汉字练习题 PDF，但页面上的 PDF 链接少说也有几十个，一张一张手动点击下载太麻烦，所以写了这个小工具，一次性把某个练习页面里所有的 PDF 链接都抓下来并保存到本地。",
