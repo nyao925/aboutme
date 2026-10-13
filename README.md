@@ -5,10 +5,12 @@
 ## 项目结构
 
 - index.html: 页面入口，负责渲染内容与语言切换
+- project.html: 个人项目详情页（通过 ?id= 指定项目）
+- scripts/site.js: 两个页面共用的深色模式切换与导航下拉菜单
 - i18n/zh.json: 中文文案
 - i18n/ja.json: 日文文案
 - i18n/en.json: 英文文案
-- stylesheets/page-style.css: 页面样式
+- stylesheets/page-style.css: 页面样式（浅色/深色主题变量、移动端适配）
 - static/img/description/my_pic.PNG: 头像图片
 
 ## i18n 说明

@@ -6,6 +6,7 @@
     "ja": "日本語",
     "en": "English"
   },
+  "themeToggle": "切换深色模式",
   "heroTitle": "关于饺子大人",
   "intro": [
     "你好，我是饺子大人，出生于中国，目前常住东京，在日本从事 AI 与企业系统相关的技术工作。",
@@ -56,6 +57,7 @@
     },
     "personalProjects": {
       "title": "个人项目",
+      "viewDetails": "查看详情",
       "items": [
         {
           "id": "python-numpy",

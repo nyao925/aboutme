@@ -6,6 +6,7 @@
     "ja": "日本語",
     "en": "English"
   },
+  "themeToggle": "Toggle dark mode",
   "heroTitle": "About Dumplings Majesty",
   "intro": [
     "Hi, I'm Dumplings Majesty — born in China, currently based in Tokyo, working on AI and enterprise systems in Japan.",
@@ -56,6 +57,7 @@
     },
     "personalProjects": {
       "title": "Personal Projects",
+      "viewDetails": "View details",
       "items": [
         {
           "id": "python-numpy",

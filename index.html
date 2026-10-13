@@ -8,6 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./static/img/favicon/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./static/img/favicon/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./static/img/favicon/apple-touch-icon.png">
+  <script src="./scripts/site.js"></script>
 </head>
 
 <body>
@@ -15,76 +16,118 @@
 <header>
   <nav id="home-nav">
     <ul>
-      <li><a class="nav-home" href="./index.html"><strong id="brand-name">饺子大人</strong></a></li>
+      <li>
+        <a class="nav-home" id="nav-home" href="./index.html">
+          <img class="brand-mark" src="./static/img/favicon/favicon-32.png" alt="" width="28" height="28">
+          <strong id="brand-name">饺子大人</strong>
+        </a>
+      </li>
       <li class="has-submenu">
-        <a href="javascript:void(0)" id="nav-personal-projects"></a>
+        <a href="#" id="nav-personal-projects" aria-haspopup="true" aria-expanded="false">
+          <span id="nav-personal-projects-label"></span>
+          <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
         <ul id="personal-projects-submenu" class="submenu"></ul>
       </li>
-      <li style="float:right; margin-right:10px; margin-top:8px;">
-        <select id="lang-select">
+      <li class="nav-spacer"></li>
+      <li class="nav-controls">
+        <select id="lang-select" aria-label="Language">
           <option value="zh" id="switch-zh">中文</option>
           <option value="ja" id="switch-ja">日本語</option>
           <option value="en" id="switch-en">English</option>
         </select>
+        <button type="button" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
       </li>
     </ul>
   </nav>
 </header>
 
 <main>
-  <h1 id="hero-title" style="padding:0; margin:0;">关于饺子大人</h1>
-  <div class="section ie-size">
-    <div class="pad-main">
-      <p>
-        <img src="./static/img/description/my_pic.PNG"
-             alt="My smile" style="float:left;width:20%;padding:10px;border-radius:50%;">
-        <span id="intro-0"></span>
-      </p>
+  <section class="card hero">
+    <div class="hero-top">
+      <img class="avatar" src="./static/img/description/my_pic.PNG" alt="" width="112" height="112">
+      <div>
+        <h1 id="hero-title">关于饺子大人</h1>
+        <p id="intro-0" class="lead"></p>
+      </div>
+    </div>
+    <div class="hero-body">
       <p id="intro-1"></p>
       <p id="intro-2"></p>
       <p id="intro-3"></p>
+    </div>
+  </section>
 
-      <h2 id="skills-title" class="small-h1"></h2>
-      <div id="skills-groups"></div>
+  <section class="card">
+    <h2 id="skills-title" class="section-title"></h2>
+    <div id="skills-groups"></div>
+    <p id="closing" class="closing"></p>
+  </section>
 
-      <p id="closing"></p>
+  <section class="card">
+    <h2 id="career-title" class="section-title"></h2>
+    <ul id="career-items" class="timeline"></ul>
+  </section>
 
-      <br>
-      <h2 id="career-title" class="small-h1"></h2>
-      <ul id="career-items"></ul>
+  <section class="card">
+    <h2 id="projects-title" class="section-title"></h2>
+    <ul id="projects-items" class="check-list"></ul>
+  </section>
 
-      <h2 id="projects-title" class="small-h1"></h2>
-      <ul id="projects-items"></ul>
+  <section class="card">
+    <h2 id="personal-projects-title" class="section-title"></h2>
+    <div id="personal-projects-cards" class="project-grid"></div>
+  </section>
 
-      <h2 id="education-title" class="small-h1"></h2>
-      <ul id="education-items"></ul>
+  <section class="card">
+    <h2 id="education-title" class="section-title"></h2>
+    <ul id="education-items" class="timeline"></ul>
+  </section>
 
-      <h2 id="certifications-title" class="small-h1"></h2>
-      <ul id="certifications-items"></ul>
+  <section class="card">
+    <h2 id="certifications-title" class="section-title"></h2>
+    <ul id="certifications-items" class="chips chips-outline"></ul>
+  </section>
 
-      <br>
-      <h2 id="contact-title" class="small-h1"></h2>
-      <p id="contact-desc"></p>
-      <div id="contact-table" style="font-size:0.9em;">
-        <div class="row">
-          <p id="email-label" style="color:#028e3d;"></p>
-          <span id="contact-email" style="text-decoration:none; color:#00b359;"></span>
-        </div>
-        <div class="row">
-          <p id="github-label" style="color:#028e3d;"></p>
-          <a id="contact-github" href="https://github.com/DumplingsMajesty" style="font-size:0.9em;" target="_blank"></a>
-        </div>
-        <div class="row">
-          <p id="qq-label" style="color:#028e3d;"></p>
-          <span id="contact-qq" style="text-decoration:none; color:#00b359;"></span>
-        </div>
+  <section class="card">
+    <h2 id="contact-title" class="section-title"></h2>
+    <p id="contact-desc" class="contact-desc"></p>
+    <div class="contact-grid">
+      <a class="contact-item" id="contact-email-link" href="#">
+        <span class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        </span>
+        <span class="contact-meta">
+          <span id="email-label" class="contact-label"></span>
+          <span id="contact-email" class="contact-value"></span>
+        </span>
+      </a>
+      <a class="contact-item" id="contact-github-link" href="#" target="_blank" rel="noopener">
+        <span class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 2.9.8.1-.6.4-1.1.7-1.3-2.2-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7c-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7a3.9 3.9 0 0 1 1 2.7c0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg>
+        </span>
+        <span class="contact-meta">
+          <span id="github-label" class="contact-label"></span>
+          <span id="contact-github" class="contact-value"></span>
+        </span>
+      </a>
+      <div class="contact-item">
+        <span class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>
+        </span>
+        <span class="contact-meta">
+          <span id="qq-label" class="contact-label"></span>
+          <span id="contact-qq" class="contact-value"></span>
+        </span>
       </div>
     </div>
-  </div>
+  </section>
 </main>
 
 <footer>
-  <br>
   <p><strong id="footer-email-label">Email:</strong> <span id="footer-email-value"></span></p>
   <p><strong id="footer-updated-label"></strong> <span id="footer-updated-value"></span></p>
   <p id="footer-copyright"></p>
@@ -110,9 +153,11 @@
     document.title = data.metaTitle;
 
     document.getElementById('brand-name').textContent = data.brandName;
+    document.getElementById('nav-home').setAttribute('aria-label', data.brandName);
     document.getElementById('switch-zh').textContent = data.langSwitch.zh;
     document.getElementById('switch-ja').textContent = data.langSwitch.ja;
     document.getElementById('switch-en').textContent = data.langSwitch.en;
+    document.getElementById('theme-toggle').setAttribute('aria-label', data.themeToggle);
     document.getElementById('hero-title').textContent = data.heroTitle;
 
     data.intro.forEach(function (line, index) {
@@ -127,24 +172,27 @@
 
     document.getElementById('closing').textContent = data.closing;
 
-    renderListSection('career', data.experience.career);
+    renderTimelineSection('career', data.experience.career);
     renderListSection('projects', data.experience.projects);
 
-    document.getElementById('nav-personal-projects').textContent = data.experience.personalProjects.title;
-    renderPersonalProjectsMenu(data.experience.personalProjects.items);
+    const personalProjects = data.experience.personalProjects;
+    document.getElementById('nav-personal-projects-label').textContent = personalProjects.title;
+    document.getElementById('personal-projects-title').textContent = personalProjects.title;
+    renderPersonalProjectsMenu(personalProjects.items);
+    renderPersonalProjectCards(personalProjects);
 
-    renderListSection('education', data.experience.education);
-    renderListSection('certifications', data.experience.certifications);
+    renderTimelineSection('education', data.experience.education);
+    renderListSection('certifications', data.experience.certifications, 'chip');
 
     document.getElementById('contact-title').textContent = data.contact.title;
     document.getElementById('contact-desc').textContent = data.contact.desc;
-    document.getElementById('email-label').textContent = data.contact.labels.email;
-    document.getElementById('github-label').textContent = data.contact.labels.github;
-    document.getElementById('qq-label').textContent = data.contact.labels.qq;
+    document.getElementById('email-label').textContent = stripColon(data.contact.labels.email);
+    document.getElementById('github-label').textContent = stripColon(data.contact.labels.github);
+    document.getElementById('qq-label').textContent = stripColon(data.contact.labels.qq);
     document.getElementById('contact-email').textContent = data.contact.email;
-    const githubLink = document.getElementById('contact-github');
-    githubLink.textContent = data.contact.github;
-    githubLink.href = data.contact.github;
+    document.getElementById('contact-email-link').href = 'mailto:' + data.contact.email;
+    document.getElementById('contact-github').textContent = data.contact.github.replace(/^https?:\/\//, '');
+    document.getElementById('contact-github-link').href = data.contact.github;
     document.getElementById('contact-qq').textContent = data.contact.qq;
 
     document.getElementById('footer-email-label').textContent = data.footer.emailLabel;
@@ -154,13 +202,45 @@
     document.getElementById('footer-copyright').textContent = data.footer.copyright;
   }
 
-  function renderListSection(prefix, section) {
+  // Labels in the locale files end with a colon, which the card layout doesn't need.
+  function stripColon(label) {
+    return label.replace(/[:：]\s*$/, '');
+  }
+
+  function renderListSection(prefix, section, itemClass) {
     document.getElementById(prefix + '-title').textContent = section.title;
     const list = document.getElementById(prefix + '-items');
     list.innerHTML = '';
     section.items.forEach(function (item) {
       const li = document.createElement('li');
+      if (itemClass) {
+        li.className = itemClass;
+      }
       li.textContent = item;
+      list.appendChild(li);
+    });
+  }
+
+  // Splits "2023年9月 - 至今 DXC" / "Sep 2023 - Present, DXC" into a date range and the rest.
+  const DATE_RANGE = /^(\S+(?: \d{4})? - (?:至今|現在|Present|\S+(?: \d{4})?))[,，]?\s+(.+)$/;
+
+  function renderTimelineSection(prefix, section) {
+    document.getElementById(prefix + '-title').textContent = section.title;
+    const list = document.getElementById(prefix + '-items');
+    list.innerHTML = '';
+    section.items.forEach(function (item) {
+      const li = document.createElement('li');
+      const match = item.match(DATE_RANGE);
+      if (match) {
+        const date = document.createElement('span');
+        date.className = 'timeline-date';
+        date.textContent = match[1];
+        li.appendChild(date);
+      }
+      const text = document.createElement('span');
+      text.className = 'timeline-text';
+      text.textContent = match ? match[2] : item;
+      li.appendChild(text);
       list.appendChild(li);
     });
   }
@@ -169,12 +249,54 @@
     const wrapper = document.getElementById('skills-groups');
     wrapper.innerHTML = '';
     groups.forEach(function (group) {
-      const p = document.createElement('p');
-      const title = document.createElement('strong');
-      title.textContent = group.name + ': ';
-      p.appendChild(title);
-      p.appendChild(document.createTextNode(group.items.join(' / ')));
-      wrapper.appendChild(p);
+      const row = document.createElement('div');
+      row.className = 'skill-group';
+      const name = document.createElement('div');
+      name.className = 'skill-group-name';
+      name.textContent = group.name;
+      row.appendChild(name);
+      const chips = document.createElement('ul');
+      chips.className = 'chips';
+      group.items.forEach(function (skill) {
+        const chip = document.createElement('li');
+        chip.className = 'chip';
+        chip.textContent = skill;
+        chips.appendChild(chip);
+      });
+      row.appendChild(chips);
+      wrapper.appendChild(row);
+    });
+  }
+
+  function renderPersonalProjectCards(section) {
+    const grid = document.getElementById('personal-projects-cards');
+    grid.innerHTML = '';
+    section.items.forEach(function (project) {
+      const card = document.createElement('a');
+      card.className = 'project-card';
+      card.href = 'project.html?id=' + encodeURIComponent(project.id);
+
+      const name = document.createElement('h3');
+      name.className = 'project-card-name';
+      name.textContent = project.name;
+      card.appendChild(name);
+
+      const tags = document.createElement('div');
+      tags.className = 'project-card-tags';
+      project.tags.forEach(function (tag) {
+        const span = document.createElement('span');
+        span.className = 'project-card-tag';
+        span.textContent = tag;
+        tags.appendChild(span);
+      });
+      card.appendChild(tags);
+
+      const more = document.createElement('span');
+      more.className = 'project-card-more';
+      more.textContent = section.viewDetails + ' →';
+      card.appendChild(more);
+
+      grid.appendChild(card);
     });
   }
 
