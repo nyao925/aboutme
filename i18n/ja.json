@@ -6,6 +6,7 @@
     "ja": "日本語",
     "en": "English"
   },
+  "themeToggle": "ダークモード切替",
   "heroTitle": "餃子大人について",
   "intro": [
     "こんにちは、餃子大人です。中国出身で、現在は東京を拠点に AI と企業システムに関わる技術業務に携わっています。",
@@ -56,6 +57,7 @@
     },
     "personalProjects": {
       "title": "個人プロジェクト",
+      "viewDetails": "詳細を見る",
       "items": [
         {
           "id": "python-numpy",
