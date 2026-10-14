@@ -12,6 +12,8 @@
   --accent-glow: rgba(23, 145, 79, 0.16);
   --shadow: 0 1px 2px rgba(16, 40, 28, 0.04), 0 8px 24px rgba(16, 40, 28, 0.06);
   --radius: 16px;
+  --hero-from: #0b6b3a;
+  --hero-to: #1fa463;
   color-scheme: light;
 }
 
@@ -28,6 +30,8 @@
     --accent-soft: #1b3428;
     --accent-glow: rgba(79, 208, 139, 0.12);
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
+    --hero-from: #08311f;
+    --hero-to: #11603a;
     color-scheme: dark;
   }
 }
@@ -44,6 +48,8 @@
   --accent-soft: #1b3428;
   --accent-glow: rgba(79, 208, 139, 0.12);
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
+  --hero-from: #08311f;
+  --hero-to: #11603a;
   color-scheme: dark;
 }
 
@@ -321,24 +327,6 @@ main {
 }
 
 /* ====== hero ====== */
-.hero-top {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  margin-bottom: 20px;
-}
-
-.avatar {
-  flex: none;
-  width: 112px;
-  height: 112px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: var(--accent-soft);
-  border: 3px solid var(--surface);
-  box-shadow: 0 0 0 3px var(--accent), var(--shadow);
-}
-
 #hero-title {
   margin: 0 0 6px;
   font-size: 2em;
@@ -346,13 +334,125 @@ main {
   letter-spacing: 0.01em;
 }
 
-.lead {
-  margin: 0;
-  color: var(--muted);
-  font-size: 1.05em;
+.hero-banner {
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.14) 1px, transparent 0) 0 0 / 22px 22px,
+    radial-gradient(520px 320px at 85% 10%, rgba(255, 214, 102, 0.35), transparent 70%),
+    radial-gradient(600px 360px at 10% 100%, rgba(32, 201, 151, 0.45), transparent 70%),
+    linear-gradient(135deg, var(--hero-from), var(--hero-to));
 }
 
-.hero-body p:last-child {
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 64px 16px 112px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.avatar-wrap {
+  position: relative;
+  flex: none;
+}
+
+/* soft halo behind the avatar */
+.avatar-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -18px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.35), transparent 70%);
+}
+
+.avatar {
+  position: relative;
+  display: block;
+  width: 152px;
+  height: 152px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff7e6;
+  border: 5px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+  transition: transform 0.3s ease;
+}
+
+.avatar-wrap:hover .avatar {
+  transform: rotate(-6deg) scale(1.04);
+}
+
+.hero-banner #hero-title {
+  margin-bottom: 10px;
+  font-size: 2.6em;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.lead {
+  margin: 0;
+  max-width: 34em;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1em;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  font-size: 0.92em;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.hero-link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+.hero-link:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* curved bottom edge blending into the page background */
+.hero-wave {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 80px;
+  fill: var(--bg);
+}
+
+.about-card {
+  position: relative;
+  z-index: 2;
+  margin-top: -88px;
+}
+
+.about-card p:last-child {
   margin-bottom: 0;
 }
 
@@ -737,14 +837,32 @@ footer p {
     padding: 22px 18px;
   }
 
-  .hero-top {
-    flex-direction: column;
-    text-align: center;
-    gap: 16px;
-  }
-
   #hero-title {
     font-size: 1.6em;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 22px;
+    padding: 40px 16px 104px;
+  }
+
+  .avatar {
+    width: 128px;
+    height: 128px;
+  }
+
+  .hero-banner #hero-title {
+    font-size: 2em;
+  }
+
+  .hero-links {
+    justify-content: center;
+  }
+
+  .hero-wave {
+    height: 48px;
   }
 
   .skill-group {
