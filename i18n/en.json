@@ -66,38 +66,74 @@
           "summary": "25 runnable examples of everyday NumPy operations, each with its output shown.",
           "tags": ["Python", "NumPy"],
           "link": "https://github.com/NYao925/Python-Numpy",
+          "scriptUrl": "https://github.com/nyao925/python-numpy/blob/master/Numpy_{n}.py",
           "detail": {
             "intro": [
               "Notes I put together while teaching myself NumPy: 25 Python scripts, each tackling one common question — creating, inserting, deleting and sorting arrays, handling missing values (NaN), filtering by condition, matrix operations, and reading and manipulating images with NumPy.",
               "The output of every snippet is written in a comment right below it, so you can follow along without running anything. To try it yourself, clone the repo and run the script with the matching number; the sample images live in the data/ folder.",
               "It’s meant for people who already know a little Python and want a quick answer to “how do I use this function again?” — just look up the script by number or keyword."
             ],
-            "topics": [
-              "01_NumPy image processing (reading, transforming, saving)",
-              "02_Converting to one-hot form with NumPy (eye, identity)",
-              "03_Computing sum, mean, max, min, max-min range, standard deviation, and variance per row/column of an array",
-              "04_NumPy's np.where() — processing elements that meet a condition",
-              "05_Deleting arbitrary rows/columns (numpy.delete)",
-              "06_Generating various kinds of random arrays",
-              "07_Generating gradient images",
-              "08_Initializing an ndarray filled with the same value",
-              "09_Creating empty ndarray arrays (empty and empty_like)",
-              "10_Splitting an image's RGB channels, plus grayscale conversion and channel swapping",
-              "11_Computing sum/mean of an ndarray that contains missing values",
-              "12_Replacing missing values (nan) in an ndarray",
-              "13_Deleting rows/columns that contain missing values (nan)",
-              "14_Controlling ndarray's display format (digit count, scientific notation, zero-padding, etc.)",
-              "15_Sorting rows/columns with sort and argsort",
-              "16_Reordering ndarray rows/columns in an arbitrary order",
-              "17_Counting elements that satisfy a condition in an ndarray",
-              "18_Extracting/deleting elements, rows, or columns that satisfy a condition",
-              "19_Inserting elements/rows/columns into an ndarray with insert",
-              "20_Converting between ndarray and a standard Python list",
-              "21_Matrix operations with NumPy (inverse, determinant, eigenvalues, etc.)",
-              "22_Checking the NumPy version (np.version)",
-              "23_Differences between Python lists, arrays, and numpy.ndarray, and correct usage",
-              "24_Selecting and assigning sub-arrays via slicing",
-              "25_Rounding an ndarray to even values with np.round"
+            "topicGroups": [
+              {
+                "title": "Basics & conversion",
+                "items": [
+                  "14_Controlling ndarray's display format (digit count, scientific notation, zero-padding, etc.)",
+                  "20_Converting between ndarray and a standard Python list",
+                  "22_Checking the NumPy version (np.version)",
+                  "23_Differences between Python lists, arrays, and numpy.ndarray, and correct usage"
+                ]
+              },
+              {
+                "title": "Creating arrays",
+                "items": [
+                  "02_Converting to one-hot form with NumPy (eye, identity)",
+                  "06_Generating various kinds of random arrays",
+                  "08_Initializing an ndarray filled with the same value",
+                  "09_Creating empty ndarray arrays (empty and empty_like)"
+                ]
+              },
+              {
+                "title": "Selecting, adding, deleting & sorting",
+                "items": [
+                  "05_Deleting arbitrary rows/columns (numpy.delete)",
+                  "15_Sorting rows/columns with sort and argsort",
+                  "16_Reordering ndarray rows/columns in an arbitrary order",
+                  "19_Inserting elements/rows/columns into an ndarray with insert",
+                  "24_Selecting and assigning sub-arrays via slicing"
+                ]
+              },
+              {
+                "title": "Filtering by condition",
+                "items": [
+                  "04_NumPy's np.where() — processing elements that meet a condition",
+                  "17_Counting elements that satisfy a condition in an ndarray",
+                  "18_Extracting/deleting elements, rows, or columns that satisfy a condition"
+                ]
+              },
+              {
+                "title": "Missing values (NaN)",
+                "items": [
+                  "11_Computing sum/mean of an ndarray that contains missing values",
+                  "12_Replacing missing values (nan) in an ndarray",
+                  "13_Deleting rows/columns that contain missing values (nan)"
+                ]
+              },
+              {
+                "title": "Calculation & statistics",
+                "items": [
+                  "03_Computing sum, mean, max, min, max-min range, standard deviation, and variance per row/column of an array",
+                  "21_Matrix operations with NumPy (inverse, determinant, eigenvalues, etc.)",
+                  "25_Rounding an ndarray to even values with np.round"
+                ]
+              },
+              {
+                "title": "Image processing",
+                "items": [
+                  "01_NumPy image processing (reading, transforming, saving)",
+                  "07_Generating gradient images",
+                  "10_Splitting an image's RGB channels, plus grayscale conversion and channel swapping"
+                ]
+              }
             ]
           }
         },
@@ -108,94 +144,155 @@
           "summary": "81 Pandas data-wrangling examples, from reading and filtering to cleaning, aggregation and visualization.",
           "tags": ["Python", "Pandas"],
           "link": "https://github.com/NYao925/Python-Pandas",
+          "scriptUrl": "https://github.com/nyao925/python-pandas/blob/master/Pandas_{n}.py",
           "detail": {
             "intro": [
               "The sequel to the NumPy notes: 81 Python scripts covering most everyday data work — reading and writing CSV, Excel and JSON, selecting and filtering rows and columns, cleaning missing and duplicate values, working with strings and dates, group-by statistics and pivot tables, and checking correlations between columns with a heatmap.",
               "As with the NumPy notes, every snippet comes with its output. Some examples use a house-prices dataset in the data/ folder, which keeps them closer to real data-analysis work.",
               "Whenever you wonder “how do I do this in Pandas?”, look up the matching script by number or keyword. I’m still adding to it — the latest update was in July 2025."
             ],
-            "topics": [
-              "01_Renaming DataFrame row/column labels (rename, inplace, batch renaming with lambda, add_prefix/add_suffix)",
-              "02_Concatenating DataFrames and Series (concat, axis direction, inner/outer join)",
-              "03_Various ways to read CSV files (headers, index, selecting columns, skipping rows, dtype, NaN handling, compressed files, tsv, etc.)",
-              "04_Selecting, getting, and changing single/multiple elements with at/iat and loc/iloc (duplicate row/column labels, mixing position and label, implicit type conversion)",
-              "05_Introduction to NaN in Pandas, dropping (dropna), filling (fillna), and extracting missing values",
-              "06_Applying NumPy functions to Pandas objects and applying functions with Pandas' own methods (map, applymap, apply)",
-              "07_Iterating over a DataFrame with a for loop (iteritems, iterrows, itertuples) and updating values inside the loop",
-              "08_Extracting rows by exact and partial string match (str.contains/endswith/startswith/match)",
-              "09_Extracting rows with multiple AND/OR/NOT conditions and operator precedence",
-              "10_Splitting and extracting strings (str.split(), str.extract())",
-              "11_Concatenating string columns (str.cat(), the + operator, handling NaN, adding the joined column with assign)",
-              "12_Deleting specified rows/columns from a DataFrame (drop())",
-              "13_String replacement, whitespace stripping, and case conversion (str.replace/strip/lower/upper/capitalize/title)",
-              "14_Transposing a DataFrame (T, transpose()), type broadcasting, views vs copies",
-              "15_Counting unique values (unique, value_counts, nunique, mode, normalized frequency)",
-              "16_Grouping the iris dataset with groupby() (mean/min/max/sum, agg(), describe(), plotting)",
-              "17_Sorting by values with sort_values() and by index with sort_index()",
-              "18_Getting rows with head()/tail() and slicing, and getting elements from the first/last row",
-              "19_Random sampling with sample() (n, frac, random_state, replace, axis)",
-              "20_Shuffling data with sample(frac=1) and reassigning row numbers with reset_index()",
-              "21_Resetting the index with reset_index() and swapping in another column as the index with set_index()",
-              "22_How to use set_index() (the drop argument, multi-level index, specifying an index when reading a CSV)",
-              "23_Extracting duplicate rows (duplicated), dropping them (drop_duplicates), and summarizing with groupby",
-              "24_Replacing elements with replace() (replacing multiple values, replacing per column, regex replacement, replacing NaN, inplace)",
-              "25_Selecting with loc on a multi-level index, slicing with IndexSlice, the xs() method, and assigning to a selection",
-              "26_Converting a column or a CSV read to a DatetimeIndex and slicing by date",
-              "27_Aggregating over arbitrary periods with resample() and combining date attributes like weekday/month/quarter/year",
-              "28_Various ways to select rows/columns on a DataFrame and Series (slicing, loc, iloc, integer column names)",
-              "29_Filtering columns by dtype with select_dtypes() (int, float, object, datetime, number, etc.)",
-              "30_Filtering rows/columns with the Index.str accessor (contains, endswith) and using the index inside query()",
-              "31_Converting between DataFrame/Series and NumPy arrays and their shared-memory relationship (values, to_numpy)",
-              "32_Book recommendation: Python Data Science Handbook, a data science reference",
-              "33_Building a Series and DataFrame from 1D/2D lists and converting back to a list (tolist)",
-              "34_Exporting CSV files with to_csv() (selecting columns, omitting header/index, custom separator, appending with mode='a', float_format, etc.)",
-              "35_Counting elements that meet a condition or are missing (df==value, isnull().sum(), count(), aggregating by row/column axis)",
-              "36_Using len(), shape, and size on a DataFrame/Series with a single-level vs. multi-level index",
-              "37_Creating a MultiIndex (set_index with multiple columns), reset_index(level=), and swaplevel()",
-              "38_Comparing aggregation on a multi-level index (mean(level=), groupby(level=), groupby(by=))",
-              "39_Comparing map() and replace() for substituting values, with timing benchmarks",
-              "40_Cross-tabulation with pd.crosstab() (margins, normalize)",
-              "41_Building pivot tables with pd.pivot_table() (index/columns/values/margins/aggfunc)",
-              "42_Extracting multiple groups from strings with str.extract() and multiple matches with str.extractall()",
-              "43_Checking version information (pd.__version__, pd.show_versions())",
-              "44_One-hot encoding with pd.get_dummies() (drop_first, dummy_na, prefix, etc.) and label-encoding categories with map()",
-              "45_Computing a correlation matrix with corr() and plotting it with seaborn.heatmap() (including a house-price dataset example)",
-              "46_Drawing heatmaps of a list/array/DataFrame with Seaborn's heatmap() and styling options (annot, cmap, figsize, etc.)",
-              "47_Binning data with pd.cut()/pd.qcut() (equal-width/equal-frequency bins, labels, precision, handling duplicate edges)",
-              "48_Comparing Python lists, array.array, and NumPy arrays, and using DataFrame.pivot_table(aggfunc='mean')",
-              "49_Various ways to add rows/columns to a DataFrame (assign, insert, concat, assigning via loc, append)",
-              "50_Reading Excel files with pd.read_excel() (sheet_name, header, index_col, usecols, skiprows)",
-              "51_Writing Excel files with DataFrame.to_excel() and writing multiple sheets with ExcelWriter",
-              "52_Parsing dates in various formats with to_datetime() and the dt accessor (year/hour/dayofweek/strftime)",
-              "53_Conditional assignment/replacement (assigning via loc with a condition, where(), mask(), np.where())",
-              "54_DataFrame.to_dict() in its various orient formats (dict/list/series/split/records/index)",
-              "55_DataFrame.to_json() in its various orient formats, plus compression and encoding options",
-              "56_Reading a JSON string/file with pd.read_json() (orient, lines, compression, nested JSON)",
-              "57_Flattening nested JSON with pd.json_normalize() (record_path, meta, sep, prefix)",
-              "58_Computing the mode with mode() (Series/DataFrame, ties, describe()'s top/freq)",
-              "59_Descriptive statistics with describe() (include/exclude dtypes, the percentiles argument)",
-              "60_Detecting missing values with isnull()/isna()/notnull()/notna(), plus all()/any()/sum()/count()",
-              "61_Building a list column with str.split() and processing it with apply(len/sorted/join)",
-              "62_Filtering with query() (referencing variables with @, isin, the str accessor, backtick column names, inplace)",
-              "63_Rounding with round() vs. Decimal's ROUND_HALF_UP/ROUND_HALF_EVEN rounding modes",
-              "64_Type conversion with astype() and string formatting (zfill/rjust/center/ljust, binary/hex representation)",
-              "65_Display options via pd.options.display (precision, float_format, max_rows, max_columns, etc.)",
-              "66_Getting, setting, and resetting display options (get_option, set_option, reset_option, option_context)",
-              "67_Slicing strings by position with Series.str[n]",
-              "68_Building a Series with index and values swapped (Series(index,values)) and benchmarking with timeit",
-              "69_Finding row/column label positions with Index.get_loc() (including duplicate indices)",
-              "70_Finding the index of the max/min value with idxmax()/idxmin() (including ties and NaN handling)",
-              "71_Ranking with rank() (method argument average/min/max/dense/first, na_option, pct)",
-              "72_Saving a column of list values: losing type info with to_csv() vs. preserving it with to_pickle()",
-              "73_Computing quantiles with quantile() (multiple quantiles, interpolation methods, effect of dtype)",
-              "74_Computing the median with median() (Series/DataFrame, row-wise with axis=1)",
-              "75_View vs. copy behavior when slicing homogeneous vs. heterogeneous-dtype DataFrames with iloc/loc (_is_view, shares_memory)",
-              "76_View semantics when loc/iloc return a Series for a single row/column, and how edits affect the original DataFrame",
-              "77_Getting the top/bottom N values with nlargest()/nsmallest() (the keep argument, sorting by multiple columns)",
-              "78_Aggregating with agg()/aggregate() (a list of functions, different functions per column, axis=1, custom functions)",
-              "79_Cumulative computations with cumsum()/cumprod() (row/column axis, skipna for missing values)",
-              "80_A demo of the now-removed pd.np (which pointed to the NumPy module)",
-              "81_Checking how corr() behaves with mixed dtypes and plotting the result with seaborn.heatmap() (including a house-price dataset example)"
+            "topicGroups": [
+              {
+                "title": "Reading & writing files",
+                "items": [
+                  "03_Various ways to read CSV files (headers, index, selecting columns, skipping rows, dtype, NaN handling, compressed files, tsv, etc.)",
+                  "34_Exporting CSV files with to_csv() (selecting columns, omitting header/index, custom separator, appending with mode='a', float_format, etc.)",
+                  "50_Reading Excel files with pd.read_excel() (sheet_name, header, index_col, usecols, skiprows)",
+                  "51_Writing Excel files with DataFrame.to_excel() and writing multiple sheets with ExcelWriter",
+                  "54_DataFrame.to_dict() in its various orient formats (dict/list/series/split/records/index)",
+                  "55_DataFrame.to_json() in its various orient formats, plus compression and encoding options",
+                  "56_Reading a JSON string/file with pd.read_json() (orient, lines, compression, nested JSON)",
+                  "57_Flattening nested JSON with pd.json_normalize() (record_path, meta, sep, prefix)",
+                  "72_Saving a column of list values: losing type info with to_csv() vs. preserving it with to_pickle()"
+                ]
+              },
+              {
+                "title": "Creating, combining & converting",
+                "items": [
+                  "02_Concatenating DataFrames and Series (concat, axis direction, inner/outer join)",
+                  "14_Transposing a DataFrame (T, transpose()), type broadcasting, views vs copies",
+                  "31_Converting between DataFrame/Series and NumPy arrays and their shared-memory relationship (values, to_numpy)",
+                  "33_Building a Series and DataFrame from 1D/2D lists and converting back to a list (tolist)",
+                  "49_Various ways to add rows/columns to a DataFrame (assign, insert, concat, assigning via loc, append)",
+                  "64_Type conversion with astype() and string formatting (zfill/rjust/center/ljust, binary/hex representation)",
+                  "68_Building a Series with index and values swapped (Series(index,values)) and benchmarking with timeit"
+                ]
+              },
+              {
+                "title": "Selecting & filtering",
+                "items": [
+                  "04_Selecting, getting, and changing single/multiple elements with at/iat and loc/iloc (duplicate row/column labels, mixing position and label, implicit type conversion)",
+                  "08_Extracting rows by exact and partial string match (str.contains/endswith/startswith/match)",
+                  "09_Extracting rows with multiple AND/OR/NOT conditions and operator precedence",
+                  "18_Getting rows with head()/tail() and slicing, and getting elements from the first/last row",
+                  "19_Random sampling with sample() (n, frac, random_state, replace, axis)",
+                  "25_Selecting with loc on a multi-level index, slicing with IndexSlice, the xs() method, and assigning to a selection",
+                  "28_Various ways to select rows/columns on a DataFrame and Series (slicing, loc, iloc, integer column names)",
+                  "29_Filtering columns by dtype with select_dtypes() (int, float, object, datetime, number, etc.)",
+                  "30_Filtering rows/columns with the Index.str accessor (contains, endswith) and using the index inside query()",
+                  "62_Filtering with query() (referencing variables with @, isin, the str accessor, backtick column names, inplace)",
+                  "69_Finding row/column label positions with Index.get_loc() (including duplicate indices)"
+                ]
+              },
+              {
+                "title": "Index & MultiIndex",
+                "items": [
+                  "20_Shuffling data with sample(frac=1) and reassigning row numbers with reset_index()",
+                  "21_Resetting the index with reset_index() and swapping in another column as the index with set_index()",
+                  "22_How to use set_index() (the drop argument, multi-level index, specifying an index when reading a CSV)",
+                  "37_Creating a MultiIndex (set_index with multiple columns), reset_index(level=), and swaplevel()",
+                  "38_Comparing aggregation on a multi-level index (mean(level=), groupby(level=), groupby(by=))"
+                ]
+              },
+              {
+                "title": "Modifying & cleaning",
+                "items": [
+                  "01_Renaming DataFrame row/column labels (rename, inplace, batch renaming with lambda, add_prefix/add_suffix)",
+                  "12_Deleting specified rows/columns from a DataFrame (drop())",
+                  "23_Extracting duplicate rows (duplicated), dropping them (drop_duplicates), and summarizing with groupby",
+                  "24_Replacing elements with replace() (replacing multiple values, replacing per column, regex replacement, replacing NaN, inplace)",
+                  "44_One-hot encoding with pd.get_dummies() (drop_first, dummy_na, prefix, etc.) and label-encoding categories with map()",
+                  "47_Binning data with pd.cut()/pd.qcut() (equal-width/equal-frequency bins, labels, precision, handling duplicate edges)"
+                ]
+              },
+              {
+                "title": "Missing values (NaN)",
+                "items": [
+                  "05_Introduction to NaN in Pandas, dropping (dropna), filling (fillna), and extracting missing values",
+                  "35_Counting elements that meet a condition or are missing (df==value, isnull().sum(), count(), aggregating by row/column axis)",
+                  "60_Detecting missing values with isnull()/isna()/notnull()/notna(), plus all()/any()/sum()/count()"
+                ]
+              },
+              {
+                "title": "Working with strings",
+                "items": [
+                  "10_Splitting and extracting strings (str.split(), str.extract())",
+                  "11_Concatenating string columns (str.cat(), the + operator, handling NaN, adding the joined column with assign)",
+                  "13_String replacement, whitespace stripping, and case conversion (str.replace/strip/lower/upper/capitalize/title)",
+                  "42_Extracting multiple groups from strings with str.extract() and multiple matches with str.extractall()",
+                  "61_Building a list column with str.split() and processing it with apply(len/sorted/join)",
+                  "67_Slicing strings by position with Series.str[n]"
+                ]
+              },
+              {
+                "title": "Dates & times",
+                "items": [
+                  "26_Converting a column or a CSV read to a DatetimeIndex and slicing by date",
+                  "27_Aggregating over arbitrary periods with resample() and combining date attributes like weekday/month/quarter/year",
+                  "52_Parsing dates in various formats with to_datetime() and the dt accessor (year/hour/dayofweek/strftime)"
+                ]
+              },
+              {
+                "title": "Applying functions & conditional assignment",
+                "items": [
+                  "06_Applying NumPy functions to Pandas objects and applying functions with Pandas' own methods (map, applymap, apply)",
+                  "07_Iterating over a DataFrame with a for loop (iteritems, iterrows, itertuples) and updating values inside the loop",
+                  "39_Comparing map() and replace() for substituting values, with timing benchmarks",
+                  "53_Conditional assignment/replacement (assigning via loc with a condition, where(), mask(), np.where())"
+                ]
+              },
+              {
+                "title": "Statistics, sorting & aggregation",
+                "items": [
+                  "15_Counting unique values (unique, value_counts, nunique, mode, normalized frequency)",
+                  "16_Grouping the iris dataset with groupby() (mean/min/max/sum, agg(), describe(), plotting)",
+                  "17_Sorting by values with sort_values() and by index with sort_index()",
+                  "36_Using len(), shape, and size on a DataFrame/Series with a single-level vs. multi-level index",
+                  "40_Cross-tabulation with pd.crosstab() (margins, normalize)",
+                  "41_Building pivot tables with pd.pivot_table() (index/columns/values/margins/aggfunc)",
+                  "58_Computing the mode with mode() (Series/DataFrame, ties, describe()'s top/freq)",
+                  "59_Descriptive statistics with describe() (include/exclude dtypes, the percentiles argument)",
+                  "63_Rounding with round() vs. Decimal's ROUND_HALF_UP/ROUND_HALF_EVEN rounding modes",
+                  "70_Finding the index of the max/min value with idxmax()/idxmin() (including ties and NaN handling)",
+                  "71_Ranking with rank() (method argument average/min/max/dense/first, na_option, pct)",
+                  "73_Computing quantiles with quantile() (multiple quantiles, interpolation methods, effect of dtype)",
+                  "74_Computing the median with median() (Series/DataFrame, row-wise with axis=1)",
+                  "77_Getting the top/bottom N values with nlargest()/nsmallest() (the keep argument, sorting by multiple columns)",
+                  "78_Aggregating with agg()/aggregate() (a list of functions, different functions per column, axis=1, custom functions)",
+                  "79_Cumulative computations with cumsum()/cumprod() (row/column axis, skipna for missing values)"
+                ]
+              },
+              {
+                "title": "Visualization",
+                "items": [
+                  "45_Computing a correlation matrix with corr() and plotting it with seaborn.heatmap() (including a house-price dataset example)",
+                  "46_Drawing heatmaps of a list/array/DataFrame with Seaborn's heatmap() and styling options (annot, cmap, figsize, etc.)",
+                  "81_Checking how corr() behaves with mixed dtypes and plotting the result with seaborn.heatmap() (including a house-price dataset example)"
+                ]
+              },
+              {
+                "title": "Display settings & misc",
+                "items": [
+                  "32_Book recommendation: Python Data Science Handbook, a data science reference",
+                  "43_Checking version information (pd.__version__, pd.show_versions())",
+                  "48_Comparing Python lists, array.array, and NumPy arrays, and using DataFrame.pivot_table(aggfunc='mean')",
+                  "65_Display options via pd.options.display (precision, float_format, max_rows, max_columns, etc.)",
+                  "66_Getting, setting, and resetting display options (get_option, set_option, reset_option, option_context)",
+                  "75_View vs. copy behavior when slicing homogeneous vs. heterogeneous-dtype DataFrames with iloc/loc (_is_view, shares_memory)",
+                  "76_View semantics when loc/iloc return a Series for a single row/column, and how edits affect the original DataFrame",
+                  "80_A demo of the now-removed pd.np (which pointed to the NumPy module)"
+                ]
+              }
             ]
           }
         },

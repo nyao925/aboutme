@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>项目详情</title>
-  <link href="./stylesheets/page-style.css?v=20261014b" type="text/css" rel="stylesheet">
+  <link href="./stylesheets/page-style.css?v=20261014c" type="text/css" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./static/img/favicon/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./static/img/favicon/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./static/img/favicon/apple-touch-icon.png">
@@ -138,6 +138,56 @@
 
   const GITHUB_ICON = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 2.9.8.1-.6.4-1.1.7-1.3-2.2-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7c-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7a3.9 3.9 0 0 1 1 2.7c0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg>';
 
+  // Topics are stored as "NN_title"; NN is shown as a badge and links to the matching script.
+  function renderTopicGroups(detail, project) {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'topic-groups';
+    project.detail.topicGroups.forEach(function (group, index) {
+      const section = document.createElement('details');
+      section.className = 'topic-group';
+      section.open = index === 0;
+
+      const summary = document.createElement('summary');
+      const title = document.createElement('span');
+      title.textContent = group.title;
+      summary.appendChild(title);
+      const count = document.createElement('span');
+      count.className = 'topic-count';
+      count.textContent = group.items.length;
+      summary.appendChild(count);
+      section.appendChild(summary);
+
+      const list = document.createElement('ul');
+      list.className = 'topic-list';
+      group.items.forEach(function (topic) {
+        const match = topic.match(/^(\d+)_\s*(.*)$/);
+        const number = match ? match[1] : '';
+        const li = document.createElement('li');
+        const row = document.createElement(number && project.scriptUrl ? 'a' : 'span');
+        row.className = 'topic-row';
+        if (row.tagName === 'A') {
+          row.href = project.scriptUrl.replace('{n}', number);
+          row.target = '_blank';
+          row.rel = 'noopener';
+        }
+        if (number) {
+          const badge = document.createElement('span');
+          badge.className = 'topic-no';
+          badge.textContent = number;
+          row.appendChild(badge);
+        }
+        const text = document.createElement('span');
+        text.textContent = match ? match[2] : topic;
+        row.appendChild(text);
+        li.appendChild(row);
+        list.appendChild(li);
+      });
+      section.appendChild(list);
+      wrapper.appendChild(section);
+    });
+    detail.appendChild(wrapper);
+  }
+
   function renderProjectDetail(project) {
     const detail = document.getElementById('project-detail');
     document.getElementById('project-not-found').style.display = 'none';
@@ -176,14 +226,18 @@
       detail.appendChild(p);
     });
 
-    const topicsList = document.createElement('ul');
-    topicsList.className = 'project-detail-topics';
-    project.detail.topics.forEach(function (topic) {
-      const li = document.createElement('li');
-      li.textContent = topic;
-      topicsList.appendChild(li);
-    });
-    detail.appendChild(topicsList);
+    if (project.detail.topicGroups) {
+      renderTopicGroups(detail, project);
+    } else {
+      const topicsList = document.createElement('ul');
+      topicsList.className = 'project-detail-topics';
+      project.detail.topics.forEach(function (topic) {
+        const li = document.createElement('li');
+        li.textContent = topic;
+        topicsList.appendChild(li);
+      });
+      detail.appendChild(topicsList);
+    }
 
     if (project.detail.usage) {
       const usageTitle = document.createElement('h4');
