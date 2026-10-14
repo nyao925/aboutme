@@ -66,38 +66,74 @@
           "summary": "25 个 NumPy 常用操作的可运行示例，每段代码都附有运行结果。",
           "tags": ["Python", "NumPy"],
           "link": "https://github.com/NYao925/Python-Numpy",
+          "scriptUrl": "https://github.com/nyao925/python-numpy/blob/master/Numpy_{n}.py",
           "detail": {
             "intro": [
               "这是我自学 NumPy 时整理的笔记，一共 25 个 Python 脚本，每个脚本讲一个常见问题：数组的创建、增删和排序，缺失值（NaN）处理，条件筛选，矩阵运算，还有用 NumPy 读取和处理图片。",
               "每段代码下面都用注释写出了运行结果，不用运行也能看懂。想动手试的话，把仓库克隆下来，运行对应编号的脚本就行，图片示例用的素材放在 data/ 目录里。",
               "适合已经会一点 Python、写代码时想快速查一下“这个函数怎么用”的人，按编号或关键词找到对应的脚本即可。"
             ],
-            "topics": [
-              "01_Numpy的图片处理（读取，变换，保存）",
-              "02_Numpy的One-hot形式的转换（eye，identity）",
-              "03_Numpy的数组各行，各列的求和，平均值，最大值，最小值，最大最小值差，标准差，方差等的计算",
-              "04_Numpy的函数np.where（）—满足条件的处理",
-              "05_Numpy任意行&列的删除方法（numpy.delete）",
-              "06_Numpy各种随机数组的生成方法",
-              "07_Numpy渐变图片的生成",
-              "08_Numpy初始化生成相同元素值的ndarray数组",
-              "09_Numpy生成空ndarray数组的方法(empty和empty_like)",
-              "10_Numpy图片RGB色彩通道的分离，以及单色化，黑色化和颜色的交换",
-              "11_Numpy含有缺失值ndarray数组的求和，平均值的计算方法",
-              "12_Numpy数组(ndarray)中缺失值(nan)的替换",
-              "13_Numpy数组(ndarray)中含有缺失值(nan)行和列的删除方法",
-              "14_NumPy数组ndarray的显示格式（位数，指数符号，零填充等）的指定",
-              "15_Numpy使用sort和argsort函数进行(行・列）排序",
-              "16_NumPy数组ndarray以任何顺序排列行和列",
-              "17_NumPy数组ndarray中计算满足条件的元素的个数",
-              "18_NumPy数组ndarray中提取，删除满足条件的元素，行和列",
-              "19_NumPy如何使用insert将元素/行/列插入/添加到数组ndarray",
-              "20_NumPy数组ndarray和Python标准列表相互转换",
-              "21_Numpy进行矩阵运算（逆矩阵，行列式，特征值等）",
-              "22_NumPy检查版本（np.version）",
-              "23_Python列表和数组以及numpy.ndarray的区别和正确使用",
-              "24_Numpy数组通过切片选择和分配子数组",
-              "25_NumPy数组np.round将ndarray舍入为偶数"
+            "topicGroups": [
+              {
+                "title": "基础与转换",
+                "items": [
+                  "14_NumPy数组ndarray的显示格式（位数，指数符号，零填充等）的指定",
+                  "20_NumPy数组ndarray和Python标准列表相互转换",
+                  "22_NumPy检查版本（np.version）",
+                  "23_Python列表和数组以及numpy.ndarray的区别和正确使用"
+                ]
+              },
+              {
+                "title": "创建数组",
+                "items": [
+                  "02_Numpy的One-hot形式的转换（eye，identity）",
+                  "06_Numpy各种随机数组的生成方法",
+                  "08_Numpy初始化生成相同元素值的ndarray数组",
+                  "09_Numpy生成空ndarray数组的方法(empty和empty_like)"
+                ]
+              },
+              {
+                "title": "选取、增删与排序",
+                "items": [
+                  "05_Numpy任意行&列的删除方法（numpy.delete）",
+                  "15_Numpy使用sort和argsort函数进行(行・列）排序",
+                  "16_NumPy数组ndarray以任何顺序排列行和列",
+                  "19_NumPy如何使用insert将元素/行/列插入/添加到数组ndarray",
+                  "24_Numpy数组通过切片选择和分配子数组"
+                ]
+              },
+              {
+                "title": "条件筛选",
+                "items": [
+                  "04_Numpy的函数np.where（）—满足条件的处理",
+                  "17_NumPy数组ndarray中计算满足条件的元素的个数",
+                  "18_NumPy数组ndarray中提取，删除满足条件的元素，行和列"
+                ]
+              },
+              {
+                "title": "缺失值（NaN）",
+                "items": [
+                  "11_Numpy含有缺失值ndarray数组的求和，平均值的计算方法",
+                  "12_Numpy数组(ndarray)中缺失值(nan)的替换",
+                  "13_Numpy数组(ndarray)中含有缺失值(nan)行和列的删除方法"
+                ]
+              },
+              {
+                "title": "计算与统计",
+                "items": [
+                  "03_Numpy的数组各行，各列的求和，平均值，最大值，最小值，最大最小值差，标准差，方差等的计算",
+                  "21_Numpy进行矩阵运算（逆矩阵，行列式，特征值等）",
+                  "25_NumPy数组np.round将ndarray舍入为偶数"
+                ]
+              },
+              {
+                "title": "图片处理",
+                "items": [
+                  "01_Numpy的图片处理（读取，变换，保存）",
+                  "07_Numpy渐变图片的生成",
+                  "10_Numpy图片RGB色彩通道的分离，以及单色化，黑色化和颜色的交换"
+                ]
+              }
             ]
           }
         },
@@ -108,94 +144,155 @@
           "summary": "81 个 Pandas 数据处理示例，从读写、筛选、清洗，到统计和可视化。",
           "tags": ["Python", "Pandas"],
           "link": "https://github.com/NYao925/Python-Pandas",
+          "scriptUrl": "https://github.com/nyao925/python-pandas/blob/master/Pandas_{n}.py",
           "detail": {
             "intro": [
               "这是 NumPy 笔记的续篇，一共 81 个 Python 脚本，覆盖日常数据处理的大部分环节：读写 CSV、Excel、JSON，选取和筛选行列，清洗缺失值和重复值，处理字符串和日期，分组统计和透视表，以及用热图查看各列之间的相关性。",
               "和 NumPy 笔记一样，每段代码都附有运行结果。部分示例用了 data/ 目录里的房价数据集，更接近真实的数据分析场景。",
               "遇到“这个操作在 Pandas 里怎么写”的时候，按编号或关键词查对应的脚本就行。这个仓库还在陆续补充，最近一次更新是 2025 年 7 月。"
             ],
-            "topics": [
-              "01_Pandas的DataFrame行名和列名修改方法（rename，inplace，lambda批量处理，add_prefix/add_suffix）",
-              "02_Pandas的DataFrame和Series连接方法（concat，axis方向，join内外连接）",
-              "03_Pandas读取CSV文件的多种方法（标题，index，指定列，跳过行，dtype，NaN处理，压缩文件，tsv等）",
-              "04_Pandas的at/iat与loc/iloc选取和修改单个/多个元素（重复行列名，位置与标签混用，隐式类型转换）",
-              "05_Pandas中NaN缺失值介绍、删除（dropna）、填充（fillna）与提取方法",
-              "06_Pandas对象应用NumPy函数及自身的函数应用方法（map，applymap，apply）",
-              "07_Pandas的DataFrame的for循环遍历方法（iteritems，iterrows，itertuples）及循环更新值",
-              "08_Pandas通过字符串完全匹配与部分匹配提取行（str.contains/endswith/startswith/match）",
-              "09_Pandas通过AND/OR/NOT多条件及运算符优先级提取行",
-              "10_Pandas字符串的分割与提取（str.split()，str.extract()）",
-              "11_Pandas字符串列的连接方法（str.cat()，+运算符，NaN处理，assign添加连接列）",
-              "12_Pandas的DataFrame指定行/列删除方法（drop()）",
-              "13_Pandas字符串的替换、空白删除与大小写转换（str.replace/strip/lower/upper/capitalize/title）",
-              "14_Pandas的DataFrame转置（T，transpose()）及类型广播、视图与复制",
-              "15_Pandas的唯一值统计（unique，value_counts，nunique，mode，归一化频率）",
-              "16_Pandas对iris数据集用groupby()分组统计（mean/min/max/sum，agg()，describe()，绘图）",
-              "17_Pandas按元素排序sort_values()与按索引排序sort_index()",
-              "18_Pandas的head()/tail()及切片获取行、获取首尾行元素",
-              "19_Pandas的sample()随机抽样方法（n，frac，random_state，replace，axis）",
-              "20_Pandas结合sample(frac=1)打乱数据与reset_index()重新分配行号",
-              "21_Pandas的reset_index()重置索引及与set_index()配合更换索引列",
-              "22_Pandas的set_index()用法（drop参数，多级索引，读取CSV时指定索引）",
-              "23_Pandas重复行的提取（duplicated）、删除（drop_duplicates）与groupby汇总",
-              "24_Pandas的replace()元素替换（多值替换，按列替换，正则替换，NaN替换，inplace）",
-              "25_Pandas多级索引的loc选取、IndexSlice切片、xs()方法及对选区赋值",
-              "26_Pandas将列或读取CSV转换为DatetimeIndex并按日期切片选取",
-              "27_Pandas通过resample()按周期汇总数据及星期/月/季度/年等日期属性组合处理",
-              "28_Pandas的DataFrame与Series多种行列索引选取方式（切片，loc，iloc，整数列名）",
-              "29_Pandas的select_dtypes()按数据类型筛选列（int，float，object，datetime，number等）",
-              "30_Pandas通过Index.str访问器（contains，endswith）筛选行列及query()中使用index",
-              "31_Pandas的DataFrame/Series与NumPy数组相互转换及内存共享关系（values，to_numpy）",
-              "32_推荐书籍：Python Data Science Handbook 数据科学参考资料",
-              "33_Pandas由一维/二维列表构造Series与DataFrame及转换回列表（tolist）",
-              "34_Pandas导出CSV文件to_csv()（指定列，去表头/索引，分隔符，追加写入mode='a'，float_format等参数）",
-              "35_Pandas统计满足条件/缺失值的元素个数（df==value，isnull().sum()，count()，按行列axis统计）",
-              "36_Pandas的DataFrame/Series的len()、shape、size在单层与多级索引下的用法",
-              "37_Pandas的MultiIndex创建（set_index多列）、reset_index(level=)与swaplevel()",
-              "38_Pandas多级索引聚合统计对比（mean(level=)，groupby(level=)，groupby(by=)）",
-              "39_Pandas的map()与replace()替换值方法对比及性能计时",
-              "40_Pandas的交叉表统计pd.crosstab()（margins，normalize）",
-              "41_Pandas的数据透视表pd.pivot_table()（index/columns/values/margins/aggfunc）",
-              "42_Pandas字符串多组提取str.extract()与多次匹配str.extractall()",
-              "43_Pandas检查版本信息（pd.__version__，pd.show_versions()）",
-              "44_Pandas的独热编码pd.get_dummies()（drop_first，dummy_na，prefix等参数）及map()类别标签编码",
-              "45_Pandas计算相关系数矩阵corr()并用seaborn.heatmap()绘制热力图（含房价数据集案例）",
-              "46_Seaborn的heatmap()绘制列表/数组/DataFrame热力图及样式参数（annot，cmap，figsize等）",
-              "47_Pandas的pd.cut()/pd.qcut()数据分箱（等宽/等频分箱，labels，precision，重复边界处理duplicates）",
-              "48_Python列表/array.array/NumPy数组对比及DataFrame.pivot_table(aggfunc='mean')用法",
-              "49_Pandas给DataFrame添加行/列的多种方法（assign，insert，concat，loc赋值，append）",
-              "50_Pandas读取Excel文件pd.read_excel()（sheet_name，header，index_col，usecols，skiprows）",
-              "51_Pandas写出Excel文件DataFrame.to_excel()及ExcelWriter多工作表写入",
-              "52_Pandas多格式日期解析to_datetime()及dt访问器（year/hour/dayofweek/strftime）",
-              "53_Pandas按条件赋值/替换（loc条件赋值，where()，mask()，np.where()）",
-              "54_Pandas的DataFrame.to_dict()多种orient格式（dict/list/series/split/records/index）",
-              "55_Pandas的DataFrame.to_json()多种orient格式及压缩、编码方式",
-              "56_Pandas读取JSON字符串/文件pd.read_json()（orient，lines，压缩，嵌套json）",
-              "57_Pandas的pd.json_normalize()展开嵌套JSON（record_path，meta，sep，prefix）",
-              "58_Pandas的mode()众数统计（Series/DataFrame，并列众数，describe()的top/freq）",
-              "59_Pandas的describe()描述性统计（include/exclude类型，percentiles参数）",
-              "60_Pandas缺失值检测isnull()/isna()/notnull()/notna()及all()/any()/sum()/count()",
-              "61_Pandas的str.split()生成列表列后用apply(len/sorted/join)处理",
-              "62_Pandas的query()查询方法（@变量引用，isin，str访问器，反引号列名，inplace）",
-              "63_Pandas的round()四舍五入与Decimal的ROUND_HALF_UP/HALF_EVEN舍入方式对比",
-              "64_Pandas的astype()类型转换及字符串格式化（zfill/rjust/center/ljust，二进制/十六进制格式）",
-              "65_Pandas显示选项pd.options.display设置（precision，float_format，max_rows，max_columns等）",
-              "66_Pandas显示选项的获取/设置/重置（get_option，set_option，reset_option，option_context）",
-              "67_Pandas的Series.str[n]字符串按位置切片取值",
-              "68_Pandas构造索引值互换的Series（Series(index,values)）及timeit性能对比",
-              "69_Pandas的Index.get_loc()查找行/列标签位置（含重复索引处理）",
-              "70_Pandas的idxmax()/idxmin()查找最大/最小值对应的索引（含并列与NaN处理）",
-              "71_Pandas的rank()排名方法（method参数average/min/max/dense/first，na_option，pct）",
-              "72_Pandas保存含列表值的列：to_csv()丢失类型 vs to_pickle()保留类型对比",
-              "73_Pandas的quantile()分位数计算（多分位数，interpolation插值方式，数据类型影响）",
-              "74_Pandas的median()中位数计算（Series/DataFrame，按行axis=1）",
-              "75_Pandas同质与异质dtype的DataFrame在iloc/loc切片时的视图与复制行为（_is_view，shares_memory）",
-              "76_Pandas的loc/iloc选取单行/列返回Series时的视图特性及修改影响原DataFrame",
-              "77_Pandas的nlargest()/nsmallest()取最大/最小N个值（keep参数，多列排序）",
-              "78_Pandas的agg()/aggregate()聚合方法（函数列表，按列指定不同函数，axis=1，自定义函数）",
-              "79_Pandas的累计计算cumsum()/cumprod()（按行/列axis，skipna缺失值处理）",
-              "80_Pandas中已废弃的pd.np（指向NumPy模块）用法演示",
-              "81_Pandas计算相关系数矩阵corr()在混合数据类型下的表现，及seaborn.heatmap()绘制热力图（含房价数据集案例）"
+            "topicGroups": [
+              {
+                "title": "读写文件",
+                "items": [
+                  "03_Pandas读取CSV文件的多种方法（标题，index，指定列，跳过行，dtype，NaN处理，压缩文件，tsv等）",
+                  "34_Pandas导出CSV文件to_csv()（指定列，去表头/索引，分隔符，追加写入mode='a'，float_format等参数）",
+                  "50_Pandas读取Excel文件pd.read_excel()（sheet_name，header，index_col，usecols，skiprows）",
+                  "51_Pandas写出Excel文件DataFrame.to_excel()及ExcelWriter多工作表写入",
+                  "54_Pandas的DataFrame.to_dict()多种orient格式（dict/list/series/split/records/index）",
+                  "55_Pandas的DataFrame.to_json()多种orient格式及压缩、编码方式",
+                  "56_Pandas读取JSON字符串/文件pd.read_json()（orient，lines，压缩，嵌套json）",
+                  "57_Pandas的pd.json_normalize()展开嵌套JSON（record_path，meta，sep，prefix）",
+                  "72_Pandas保存含列表值的列：to_csv()丢失类型 vs to_pickle()保留类型对比"
+                ]
+              },
+              {
+                "title": "创建、合并与转换",
+                "items": [
+                  "02_Pandas的DataFrame和Series连接方法（concat，axis方向，join内外连接）",
+                  "14_Pandas的DataFrame转置（T，transpose()）及类型广播、视图与复制",
+                  "31_Pandas的DataFrame/Series与NumPy数组相互转换及内存共享关系（values，to_numpy）",
+                  "33_Pandas由一维/二维列表构造Series与DataFrame及转换回列表（tolist）",
+                  "49_Pandas给DataFrame添加行/列的多种方法（assign，insert，concat，loc赋值，append）",
+                  "64_Pandas的astype()类型转换及字符串格式化（zfill/rjust/center/ljust，二进制/十六进制格式）",
+                  "68_Pandas构造索引值互换的Series（Series(index,values)）及timeit性能对比"
+                ]
+              },
+              {
+                "title": "选取与筛选",
+                "items": [
+                  "04_Pandas的at/iat与loc/iloc选取和修改单个/多个元素（重复行列名，位置与标签混用，隐式类型转换）",
+                  "08_Pandas通过字符串完全匹配与部分匹配提取行（str.contains/endswith/startswith/match）",
+                  "09_Pandas通过AND/OR/NOT多条件及运算符优先级提取行",
+                  "18_Pandas的head()/tail()及切片获取行、获取首尾行元素",
+                  "19_Pandas的sample()随机抽样方法（n，frac，random_state，replace，axis）",
+                  "25_Pandas多级索引的loc选取、IndexSlice切片、xs()方法及对选区赋值",
+                  "28_Pandas的DataFrame与Series多种行列索引选取方式（切片，loc，iloc，整数列名）",
+                  "29_Pandas的select_dtypes()按数据类型筛选列（int，float，object，datetime，number等）",
+                  "30_Pandas通过Index.str访问器（contains，endswith）筛选行列及query()中使用index",
+                  "62_Pandas的query()查询方法（@变量引用，isin，str访问器，反引号列名，inplace）",
+                  "69_Pandas的Index.get_loc()查找行/列标签位置（含重复索引处理）"
+                ]
+              },
+              {
+                "title": "索引与多级索引",
+                "items": [
+                  "20_Pandas结合sample(frac=1)打乱数据与reset_index()重新分配行号",
+                  "21_Pandas的reset_index()重置索引及与set_index()配合更换索引列",
+                  "22_Pandas的set_index()用法（drop参数，多级索引，读取CSV时指定索引）",
+                  "37_Pandas的MultiIndex创建（set_index多列）、reset_index(level=)与swaplevel()",
+                  "38_Pandas多级索引聚合统计对比（mean(level=)，groupby(level=)，groupby(by=)）"
+                ]
+              },
+              {
+                "title": "修改与清洗",
+                "items": [
+                  "01_Pandas的DataFrame行名和列名修改方法（rename，inplace，lambda批量处理，add_prefix/add_suffix）",
+                  "12_Pandas的DataFrame指定行/列删除方法（drop()）",
+                  "23_Pandas重复行的提取（duplicated）、删除（drop_duplicates）与groupby汇总",
+                  "24_Pandas的replace()元素替换（多值替换，按列替换，正则替换，NaN替换，inplace）",
+                  "44_Pandas的独热编码pd.get_dummies()（drop_first，dummy_na，prefix等参数）及map()类别标签编码",
+                  "47_Pandas的pd.cut()/pd.qcut()数据分箱（等宽/等频分箱，labels，precision，重复边界处理duplicates）"
+                ]
+              },
+              {
+                "title": "缺失值（NaN）",
+                "items": [
+                  "05_Pandas中NaN缺失值介绍、删除（dropna）、填充（fillna）与提取方法",
+                  "35_Pandas统计满足条件/缺失值的元素个数（df==value，isnull().sum()，count()，按行列axis统计）",
+                  "60_Pandas缺失值检测isnull()/isna()/notnull()/notna()及all()/any()/sum()/count()"
+                ]
+              },
+              {
+                "title": "字符串处理",
+                "items": [
+                  "10_Pandas字符串的分割与提取（str.split()，str.extract()）",
+                  "11_Pandas字符串列的连接方法（str.cat()，+运算符，NaN处理，assign添加连接列）",
+                  "13_Pandas字符串的替换、空白删除与大小写转换（str.replace/strip/lower/upper/capitalize/title）",
+                  "42_Pandas字符串多组提取str.extract()与多次匹配str.extractall()",
+                  "61_Pandas的str.split()生成列表列后用apply(len/sorted/join)处理",
+                  "67_Pandas的Series.str[n]字符串按位置切片取值"
+                ]
+              },
+              {
+                "title": "日期与时间",
+                "items": [
+                  "26_Pandas将列或读取CSV转换为DatetimeIndex并按日期切片选取",
+                  "27_Pandas通过resample()按周期汇总数据及星期/月/季度/年等日期属性组合处理",
+                  "52_Pandas多格式日期解析to_datetime()及dt访问器（year/hour/dayofweek/strftime）"
+                ]
+              },
+              {
+                "title": "函数应用与条件赋值",
+                "items": [
+                  "06_Pandas对象应用NumPy函数及自身的函数应用方法（map，applymap，apply）",
+                  "07_Pandas的DataFrame的for循环遍历方法（iteritems，iterrows，itertuples）及循环更新值",
+                  "39_Pandas的map()与replace()替换值方法对比及性能计时",
+                  "53_Pandas按条件赋值/替换（loc条件赋值，where()，mask()，np.where()）"
+                ]
+              },
+              {
+                "title": "统计、排序与聚合",
+                "items": [
+                  "15_Pandas的唯一值统计（unique，value_counts，nunique，mode，归一化频率）",
+                  "16_Pandas对iris数据集用groupby()分组统计（mean/min/max/sum，agg()，describe()，绘图）",
+                  "17_Pandas按元素排序sort_values()与按索引排序sort_index()",
+                  "36_Pandas的DataFrame/Series的len()、shape、size在单层与多级索引下的用法",
+                  "40_Pandas的交叉表统计pd.crosstab()（margins，normalize）",
+                  "41_Pandas的数据透视表pd.pivot_table()（index/columns/values/margins/aggfunc）",
+                  "58_Pandas的mode()众数统计（Series/DataFrame，并列众数，describe()的top/freq）",
+                  "59_Pandas的describe()描述性统计（include/exclude类型，percentiles参数）",
+                  "63_Pandas的round()四舍五入与Decimal的ROUND_HALF_UP/HALF_EVEN舍入方式对比",
+                  "70_Pandas的idxmax()/idxmin()查找最大/最小值对应的索引（含并列与NaN处理）",
+                  "71_Pandas的rank()排名方法（method参数average/min/max/dense/first，na_option，pct）",
+                  "73_Pandas的quantile()分位数计算（多分位数，interpolation插值方式，数据类型影响）",
+                  "74_Pandas的median()中位数计算（Series/DataFrame，按行axis=1）",
+                  "77_Pandas的nlargest()/nsmallest()取最大/最小N个值（keep参数，多列排序）",
+                  "78_Pandas的agg()/aggregate()聚合方法（函数列表，按列指定不同函数，axis=1，自定义函数）",
+                  "79_Pandas的累计计算cumsum()/cumprod()（按行/列axis，skipna缺失值处理）"
+                ]
+              },
+              {
+                "title": "可视化",
+                "items": [
+                  "45_Pandas计算相关系数矩阵corr()并用seaborn.heatmap()绘制热力图（含房价数据集案例）",
+                  "46_Seaborn的heatmap()绘制列表/数组/DataFrame热力图及样式参数（annot，cmap，figsize等）",
+                  "81_Pandas计算相关系数矩阵corr()在混合数据类型下的表现，及seaborn.heatmap()绘制热力图（含房价数据集案例）"
+                ]
+              },
+              {
+                "title": "显示设置与其他",
+                "items": [
+                  "32_推荐书籍：Python Data Science Handbook 数据科学参考资料",
+                  "43_Pandas检查版本信息（pd.__version__，pd.show_versions()）",
+                  "48_Python列表/array.array/NumPy数组对比及DataFrame.pivot_table(aggfunc='mean')用法",
+                  "65_Pandas显示选项pd.options.display设置（precision，float_format，max_rows，max_columns等）",
+                  "66_Pandas显示选项的获取/设置/重置（get_option，set_option，reset_option，option_context）",
+                  "75_Pandas同质与异质dtype的DataFrame在iloc/loc切片时的视图与复制行为（_is_view，shares_memory）",
+                  "76_Pandas的loc/iloc选取单行/列返回Series时的视图特性及修改影响原DataFrame",
+                  "80_Pandas中已废弃的pd.np（指向NumPy模块）用法演示"
+                ]
+              }
             ]
           }
         },

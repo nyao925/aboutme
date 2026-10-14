@@ -66,38 +66,74 @@
           "summary": "NumPy のよく使う操作をまとめた 25 本の実行可能なサンプル。各コードに実行結果を付けています。",
           "tags": ["Python", "NumPy"],
           "link": "https://github.com/NYao925/Python-Numpy",
+          "scriptUrl": "https://github.com/nyao925/python-numpy/blob/master/Numpy_{n}.py",
           "detail": {
             "intro": [
               "NumPy を独学したときにまとめたノートで、全 25 本の Python スクリプトです。配列の作成・追加・削除・並べ替え、欠損値（NaN）の処理、条件による抽出、行列演算、NumPy での画像の読み込みと加工など、よくある疑問を 1 本につき 1 つ取り上げています。",
               "各コードの下にはコメントで実行結果を書いてあるので、実行しなくても内容が分かります。手元で試したい場合は、リポジトリをクローンして該当する番号のスクリプトを実行するだけです。画像サンプルの素材は data/ フォルダにあります。",
               "Python を少し書ける方が、コードを書きながら「この関数はどう使うんだっけ」とすぐに確認したいときに向いています。番号やキーワードで該当するスクリプトを探してください。"
             ],
-            "topics": [
-              "01_NumPyによる画像処理（読み込み、変換、保存）",
-              "02_NumPyによるOne-Hot形式への変換（eye、identity）",
-              "03_NumPy配列の行・列ごとの合計、平均、最大値、最小値、最大最小差、標準偏差、分散の計算",
-              "04_NumPyの関数np.where()—条件を満たす場合の処理",
-              "05_NumPyで任意の行・列を削除する方法（numpy.delete）",
-              "06_NumPyで様々な乱数配列を生成する方法",
-              "07_NumPyでグラデーション画像を生成する",
-              "08_NumPyで同じ値を持つndarray配列を初期化生成する",
-              "09_NumPyで空のndarray配列を生成する方法（emptyとempty_like）",
-              "10_NumPyによる画像のRGBチャンネル分離、単色化・グレースケール化・色の入れ替え",
-              "11_欠損値を含むNumPy配列(ndarray)の合計・平均値の計算方法",
-              "12_NumPy配列(ndarray)内の欠損値(nan)を置換する",
-              "13_欠損値(nan)を含む行・列を削除する方法",
-              "14_NumPy配列ndarrayの表示形式（桁数、指数表記、ゼロ埋めなど）を指定する",
-              "15_sortとargsortを使った(行・列の)並べ替え",
-              "16_NumPy配列ndarrayの行・列を任意の順序で並べ替える",
-              "17_NumPy配列ndarrayで条件を満たす要素の個数を数える",
-              "18_NumPy配列ndarrayから条件を満たす要素・行・列を抽出／削除する",
-              "19_insertを使って配列ndarrayに要素／行／列を挿入・追加する方法",
-              "20_NumPy配列ndarrayとPython標準リストの相互変換",
-              "21_NumPyによる行列演算（逆行列、行列式、固有値など）",
-              "22_NumPyのバージョン確認（np.version）",
-              "23_Pythonのリストと配列、numpy.ndarrayの違いと正しい使い方",
-              "24_スライスを使ってNumPy配列の部分配列を選択・代入する",
-              "25_NumPyのnp.roundでndarrayを偶数丸めする"
+            "topicGroups": [
+              {
+                "title": "基本と変換",
+                "items": [
+                  "14_NumPy配列ndarrayの表示形式（桁数、指数表記、ゼロ埋めなど）を指定する",
+                  "20_NumPy配列ndarrayとPython標準リストの相互変換",
+                  "22_NumPyのバージョン確認（np.version）",
+                  "23_Pythonのリストと配列、numpy.ndarrayの違いと正しい使い方"
+                ]
+              },
+              {
+                "title": "配列の作成",
+                "items": [
+                  "02_NumPyによるOne-Hot形式への変換（eye、identity）",
+                  "06_NumPyで様々な乱数配列を生成する方法",
+                  "08_NumPyで同じ値を持つndarray配列を初期化生成する",
+                  "09_NumPyで空のndarray配列を生成する方法（emptyとempty_like）"
+                ]
+              },
+              {
+                "title": "選択・追加・削除・並べ替え",
+                "items": [
+                  "05_NumPyで任意の行・列を削除する方法（numpy.delete）",
+                  "15_sortとargsortを使った(行・列の)並べ替え",
+                  "16_NumPy配列ndarrayの行・列を任意の順序で並べ替える",
+                  "19_insertを使って配列ndarrayに要素／行／列を挿入・追加する方法",
+                  "24_スライスを使ってNumPy配列の部分配列を選択・代入する"
+                ]
+              },
+              {
+                "title": "条件による抽出",
+                "items": [
+                  "04_NumPyの関数np.where()—条件を満たす場合の処理",
+                  "17_NumPy配列ndarrayで条件を満たす要素の個数を数える",
+                  "18_NumPy配列ndarrayから条件を満たす要素・行・列を抽出／削除する"
+                ]
+              },
+              {
+                "title": "欠損値（NaN）",
+                "items": [
+                  "11_欠損値を含むNumPy配列(ndarray)の合計・平均値の計算方法",
+                  "12_NumPy配列(ndarray)内の欠損値(nan)を置換する",
+                  "13_欠損値(nan)を含む行・列を削除する方法"
+                ]
+              },
+              {
+                "title": "計算と統計",
+                "items": [
+                  "03_NumPy配列の行・列ごとの合計、平均、最大値、最小値、最大最小差、標準偏差、分散の計算",
+                  "21_NumPyによる行列演算（逆行列、行列式、固有値など）",
+                  "25_NumPyのnp.roundでndarrayを偶数丸めする"
+                ]
+              },
+              {
+                "title": "画像処理",
+                "items": [
+                  "01_NumPyによる画像処理（読み込み、変換、保存）",
+                  "07_NumPyでグラデーション画像を生成する",
+                  "10_NumPyによる画像のRGBチャンネル分離、単色化・グレースケール化・色の入れ替え"
+                ]
+              }
             ]
           }
         },
@@ -108,94 +144,155 @@
           "summary": "Pandas のデータ処理サンプル 81 本。読み書き・抽出・クレンジングから集計・可視化まで。",
           "tags": ["Python", "Pandas"],
           "link": "https://github.com/NYao925/Python-Pandas",
+          "scriptUrl": "https://github.com/nyao925/python-pandas/blob/master/Pandas_{n}.py",
           "detail": {
             "intro": [
               "NumPy ノートの続編で、全 81 本の Python スクリプトです。CSV・Excel・JSON の読み書き、行と列の選択・抽出、欠損値や重複のクレンジング、文字列や日付の処理、グループ集計とピボットテーブル、ヒートマップによる列間の相関の確認まで、日常のデータ処理のほとんどをカバーしています。",
               "NumPy ノートと同じく、各コードに実行結果を付けています。一部のサンプルでは data/ フォルダの住宅価格データセットを使っており、実際のデータ分析に近い形で試せます。",
               "「この操作は Pandas でどう書くんだっけ」と思ったときに、番号やキーワードで該当するスクリプトを探してください。今も少しずつ追加していて、最終更新は 2025 年 7 月です。"
             ],
-            "topics": [
-              "01_PandasのDataFrameで行名・列名を変更する方法（rename、inplace、lambdaによる一括処理、add_prefix/add_suffix）",
-              "02_PandasのDataFrameとSeriesの結合方法（concat、axis方向、joinによる内部・外部結合）",
-              "03_PandasでCSVファイルを読み込む様々な方法（見出し、index、列指定、行スキップ、dtype、NaN処理、圧縮ファイル、tsvなど）",
-              "04_at/iatとloc/ilocによる単一・複数要素の選択・取得・変更（重複する行名・列名、番号とラベルの混在指定、暗黙的な型変換）",
-              "05_PandasにおけるNaN欠損値の紹介、削除（dropna）、埋め合わせ（fillna）と抽出方法",
-              "06_PandasオブジェクトへのNumPy関数の適用と自身のメソッドによる関数適用（map、applymap、apply）",
-              "07_PandasのDataFrameをforループで処理する方法（iteritems、iterrows、itertuples）とループ内での値の更新",
-              "08_文字列の完全一致・部分一致による行の抽出（str.contains/endswith/startswith/match）",
-              "09_AND/OR/NOTの複数条件と演算子の優先順位による行の抽出",
-              "10_文字列の分割と抽出（str.split()、str.extract()）",
-              "11_文字列列の連結方法（str.cat()、+演算子、NaNの扱い、assignによる連結列の追加）",
-              "12_PandasのDataFrameで指定した行・列を削除する方法（drop()）",
-              "13_文字列の置換、空白削除、大文字小文字変換（str.replace/strip/lower/upper/capitalize/title）",
-              "14_PandasのDataFrameの転置（T、transpose()）と型のブロードキャスト、ビューとコピー",
-              "15_ユニークな値の集計（unique、value_counts、nunique、mode、頻度の正規化）",
-              "16_irisデータセットをgroupby()でグループ集計（mean/min/max/sum、agg()、describe()、グラフ描画）",
-              "17_値によるソートsort_values()とインデックスによるソートsort_index()",
-              "18_head()/tail()とスライスによる行の取得、先頭・末尾行の要素取得",
-              "19_sample()によるランダム抽出（n、frac、random_state、replace、axis）",
-              "20_sample(frac=1)によるデータのシャッフルとreset_index()による行番号の振り直し",
-              "21_reset_index()によるインデックスのリセットとset_index()を組み合わせたインデックス列の変更",
-              "22_set_index()の使い方（drop引数、複数階層インデックス、CSV読み込み時のインデックス指定）",
-              "23_重複行の抽出（duplicated）、削除（drop_duplicates）、groupbyによる集計",
-              "24_replace()による要素の置換（複数値の置換、列指定での置換、正規表現での置換、NaNの置換、inplace）",
-              "25_マルチインデックスにおけるlocでの選択、IndexSliceによるスライス、xs()メソッド、選択範囲への代入",
-              "26_列またはCSV読み込み時にDatetimeIndexへ変換し日付でスライス選択",
-              "27_resample()による任意期間での集計と曜日・月・四半期・年などの日付属性の組み合わせ処理",
-              "28_PandasのDataFrame・Seriesの様々な行列選択方法（スライス、loc、iloc、整数列名）",
-              "29_select_dtypes()によるデータ型での列の絞り込み（int、float、object、datetime、numberなど）",
-              "30_Index.strアクセサ（contains、endswith）による行列の絞り込みとquery()内でのindexの利用",
-              "31_PandasのDataFrame/SeriesとNumPy配列の相互変換及びメモリ共有の関係（values、to_numpy）",
-              "32_おすすめ書籍の紹介：Python Data Science Handbook（データサイエンスの参考資料）",
-              "33_1次元・2次元リストからSeriesとDataFrameを作成し、リストへ変換し直す方法（tolist）",
-              "34_to_csv()によるCSVファイル出力（列指定、ヘッダー/インデックス省略、区切り文字、mode='a'での追記、float_formatなど）",
-              "35_条件に合致する・欠損している要素数の集計（df==value、isnull().sum()、count()、行/列axisでの集計）",
-              "36_単一インデックスとマルチインデックスにおけるDataFrame/Seriesのlen()、shape、sizeの使い方",
-              "37_MultiIndexの作成（複数列でのset_index）、reset_index(level=)、swaplevel()",
-              "38_マルチインデックスでの集計統計の比較（mean(level=)、groupby(level=)、groupby(by=)）",
-              "39_map()とreplace()による値の置換方法の比較と処理時間の計測",
-              "40_pd.crosstab()によるクロス集計（margins、normalize）",
-              "41_pd.pivot_table()によるピボットテーブル作成（index/columns/values/margins/aggfunc）",
-              "42_str.extract()による文字列の複数グループ抽出とstr.extractall()による複数マッチ抽出",
-              "43_バージョン情報の確認（pd.__version__、pd.show_versions()）",
-              "44_pd.get_dummies()によるOne-Hotエンコーディング（drop_first、dummy_na、prefixなど）とmap()によるカテゴリラベルの変換",
-              "45_corr()で相関係数行列を計算しseaborn.heatmap()でヒートマップを描画（住宅価格データセットの例を含む）",
-              "46_Seaborn heatmap()によるリスト/配列/DataFrameのヒートマップ描画とスタイル指定（annot、cmap、figsizeなど）",
-              "47_pd.cut()/pd.qcut()によるビニング（等幅・等頻度分割、labels、precision、重複境界の処理duplicates）",
-              "48_Pythonリスト/array.array/NumPy配列の比較とDataFrame.pivot_table(aggfunc='mean')の使い方",
-              "49_PandasのDataFrameに行・列を追加する様々な方法（assign、insert、concat、locでの代入、append）",
-              "50_pd.read_excel()によるExcelファイルの読み込み（sheet_name、header、index_col、usecols、skiprows）",
-              "51_DataFrame.to_excel()によるExcelファイルの書き出しとExcelWriterによる複数シート書き込み",
-              "52_to_datetime()による様々な形式の日付解析とdtアクセサ（year/hour/dayofweek/strftime）",
-              "53_条件による値の代入・置換（loc条件代入、where()、mask()、np.where()）",
-              "54_DataFrame.to_dict()の様々なorient形式（dict/list/series/split/records/index）",
-              "55_DataFrame.to_json()の様々なorient形式と圧縮・エンコード方式",
-              "56_pd.read_json()によるJSON文字列/ファイルの読み込み（orient、lines、圧縮、ネストしたjson）",
-              "57_pd.json_normalize()によるネストしたJSONの展開（record_path、meta、sep、prefix）",
-              "58_mode()による最頻値の集計（Series/DataFrame、複数最頻値、describe()のtop/freq）",
-              "59_describe()による記述統計（include/exclude型指定、percentiles引数）",
-              "60_isnull()/isna()/notnull()/notna()による欠損値検出とall()/any()/sum()/count()",
-              "61_str.split()でリスト列を作成しapply(len/sorted/join)で処理する方法",
-              "62_query()による絞り込み（@による変数参照、isin、strアクセサ、バッククォート列名、inplace）",
-              "63_round()による四捨五入とDecimalのROUND_HALF_UP/HALF_EVENによる丸め方式の比較",
-              "64_astype()による型変換と文字列フォーマット（zfill/rjust/center/ljust、2進数/16進数表記）",
-              "65_pd.options.displayによる表示オプション設定（precision、float_format、max_rows、max_columnsなど）",
-              "66_表示オプションの取得・設定・リセット（get_option、set_option、reset_option、option_context）",
-              "67_Series.str[n]による文字列の位置指定スライス取得",
-              "68_インデックスと値を入れ替えたSeriesの作成（Series(index,values)）とtimeitによる性能比較",
-              "69_Index.get_loc()による行・列ラベルの位置検索（重複インデックスの扱いを含む）",
-              "70_idxmax()/idxmin()による最大値・最小値に対応するインデックスの検索（同値やNaNの扱いを含む）",
-              "71_rank()による順位付け（method引数average/min/max/dense/first、na_option、pct）",
-              "72_リスト値を含む列の保存：to_csv()での型の欠落 vs to_pickle()での型保持の比較",
-              "73_quantile()による分位数計算（複数分位数、interpolation補間方式、データ型による違い）",
-              "74_median()による中央値の計算（Series/DataFrame、axis=1での行方向計算）",
-              "75_同質・異質dtypeのDataFrameにおけるiloc/locスライス時のビューとコピーの挙動（_is_view、shares_memory）",
-              "76_loc/ilocで単一行・列を選択しSeriesを返す際のビューの特性と元のDataFrameへの影響",
-              "77_nlargest()/nsmallest()による上位・下位N件の取得（keep引数、複数列でのソート）",
-              "78_agg()/aggregate()による集計方法（関数のリスト、列ごとに異なる関数の指定、axis=1、カスタム関数）",
-              "79_cumsum()/cumprod()による累積計算（行/列axis、skipnaによる欠損値の扱い）",
-              "80_Pandasで廃止されたpd.np（NumPyモジュールを指す）の使用例",
-              "81_corr()で混在するデータ型における相関係数行列の挙動を確認し、seaborn.heatmap()でヒートマップを描画（住宅価格データセットの例を含む）"
+            "topicGroups": [
+              {
+                "title": "ファイルの読み書き",
+                "items": [
+                  "03_PandasでCSVファイルを読み込む様々な方法（見出し、index、列指定、行スキップ、dtype、NaN処理、圧縮ファイル、tsvなど）",
+                  "34_to_csv()によるCSVファイル出力（列指定、ヘッダー/インデックス省略、区切り文字、mode='a'での追記、float_formatなど）",
+                  "50_pd.read_excel()によるExcelファイルの読み込み（sheet_name、header、index_col、usecols、skiprows）",
+                  "51_DataFrame.to_excel()によるExcelファイルの書き出しとExcelWriterによる複数シート書き込み",
+                  "54_DataFrame.to_dict()の様々なorient形式（dict/list/series/split/records/index）",
+                  "55_DataFrame.to_json()の様々なorient形式と圧縮・エンコード方式",
+                  "56_pd.read_json()によるJSON文字列/ファイルの読み込み（orient、lines、圧縮、ネストしたjson）",
+                  "57_pd.json_normalize()によるネストしたJSONの展開（record_path、meta、sep、prefix）",
+                  "72_リスト値を含む列の保存：to_csv()での型の欠落 vs to_pickle()での型保持の比較"
+                ]
+              },
+              {
+                "title": "作成・結合・変換",
+                "items": [
+                  "02_PandasのDataFrameとSeriesの結合方法（concat、axis方向、joinによる内部・外部結合）",
+                  "14_PandasのDataFrameの転置（T、transpose()）と型のブロードキャスト、ビューとコピー",
+                  "31_PandasのDataFrame/SeriesとNumPy配列の相互変換及びメモリ共有の関係（values、to_numpy）",
+                  "33_1次元・2次元リストからSeriesとDataFrameを作成し、リストへ変換し直す方法（tolist）",
+                  "49_PandasのDataFrameに行・列を追加する様々な方法（assign、insert、concat、locでの代入、append）",
+                  "64_astype()による型変換と文字列フォーマット（zfill/rjust/center/ljust、2進数/16進数表記）",
+                  "68_インデックスと値を入れ替えたSeriesの作成（Series(index,values)）とtimeitによる性能比較"
+                ]
+              },
+              {
+                "title": "選択と抽出",
+                "items": [
+                  "04_at/iatとloc/ilocによる単一・複数要素の選択・取得・変更（重複する行名・列名、番号とラベルの混在指定、暗黙的な型変換）",
+                  "08_文字列の完全一致・部分一致による行の抽出（str.contains/endswith/startswith/match）",
+                  "09_AND/OR/NOTの複数条件と演算子の優先順位による行の抽出",
+                  "18_head()/tail()とスライスによる行の取得、先頭・末尾行の要素取得",
+                  "19_sample()によるランダム抽出（n、frac、random_state、replace、axis）",
+                  "25_マルチインデックスにおけるlocでの選択、IndexSliceによるスライス、xs()メソッド、選択範囲への代入",
+                  "28_PandasのDataFrame・Seriesの様々な行列選択方法（スライス、loc、iloc、整数列名）",
+                  "29_select_dtypes()によるデータ型での列の絞り込み（int、float、object、datetime、numberなど）",
+                  "30_Index.strアクセサ（contains、endswith）による行列の絞り込みとquery()内でのindexの利用",
+                  "62_query()による絞り込み（@による変数参照、isin、strアクセサ、バッククォート列名、inplace）",
+                  "69_Index.get_loc()による行・列ラベルの位置検索（重複インデックスの扱いを含む）"
+                ]
+              },
+              {
+                "title": "インデックスとマルチインデックス",
+                "items": [
+                  "20_sample(frac=1)によるデータのシャッフルとreset_index()による行番号の振り直し",
+                  "21_reset_index()によるインデックスのリセットとset_index()を組み合わせたインデックス列の変更",
+                  "22_set_index()の使い方（drop引数、複数階層インデックス、CSV読み込み時のインデックス指定）",
+                  "37_MultiIndexの作成（複数列でのset_index）、reset_index(level=)、swaplevel()",
+                  "38_マルチインデックスでの集計統計の比較（mean(level=)、groupby(level=)、groupby(by=)）"
+                ]
+              },
+              {
+                "title": "変更とクレンジング",
+                "items": [
+                  "01_PandasのDataFrameで行名・列名を変更する方法（rename、inplace、lambdaによる一括処理、add_prefix/add_suffix）",
+                  "12_PandasのDataFrameで指定した行・列を削除する方法（drop()）",
+                  "23_重複行の抽出（duplicated）、削除（drop_duplicates）、groupbyによる集計",
+                  "24_replace()による要素の置換（複数値の置換、列指定での置換、正規表現での置換、NaNの置換、inplace）",
+                  "44_pd.get_dummies()によるOne-Hotエンコーディング（drop_first、dummy_na、prefixなど）とmap()によるカテゴリラベルの変換",
+                  "47_pd.cut()/pd.qcut()によるビニング（等幅・等頻度分割、labels、precision、重複境界の処理duplicates）"
+                ]
+              },
+              {
+                "title": "欠損値（NaN）",
+                "items": [
+                  "05_PandasにおけるNaN欠損値の紹介、削除（dropna）、埋め合わせ（fillna）と抽出方法",
+                  "35_条件に合致する・欠損している要素数の集計（df==value、isnull().sum()、count()、行/列axisでの集計）",
+                  "60_isnull()/isna()/notnull()/notna()による欠損値検出とall()/any()/sum()/count()"
+                ]
+              },
+              {
+                "title": "文字列の処理",
+                "items": [
+                  "10_文字列の分割と抽出（str.split()、str.extract()）",
+                  "11_文字列列の連結方法（str.cat()、+演算子、NaNの扱い、assignによる連結列の追加）",
+                  "13_文字列の置換、空白削除、大文字小文字変換（str.replace/strip/lower/upper/capitalize/title）",
+                  "42_str.extract()による文字列の複数グループ抽出とstr.extractall()による複数マッチ抽出",
+                  "61_str.split()でリスト列を作成しapply(len/sorted/join)で処理する方法",
+                  "67_Series.str[n]による文字列の位置指定スライス取得"
+                ]
+              },
+              {
+                "title": "日付と時刻",
+                "items": [
+                  "26_列またはCSV読み込み時にDatetimeIndexへ変換し日付でスライス選択",
+                  "27_resample()による任意期間での集計と曜日・月・四半期・年などの日付属性の組み合わせ処理",
+                  "52_to_datetime()による様々な形式の日付解析とdtアクセサ（year/hour/dayofweek/strftime）"
+                ]
+              },
+              {
+                "title": "関数の適用と条件付き代入",
+                "items": [
+                  "06_PandasオブジェクトへのNumPy関数の適用と自身のメソッドによる関数適用（map、applymap、apply）",
+                  "07_PandasのDataFrameをforループで処理する方法（iteritems、iterrows、itertuples）とループ内での値の更新",
+                  "39_map()とreplace()による値の置換方法の比較と処理時間の計測",
+                  "53_条件による値の代入・置換（loc条件代入、where()、mask()、np.where()）"
+                ]
+              },
+              {
+                "title": "統計・並べ替え・集計",
+                "items": [
+                  "15_ユニークな値の集計（unique、value_counts、nunique、mode、頻度の正規化）",
+                  "16_irisデータセットをgroupby()でグループ集計（mean/min/max/sum、agg()、describe()、グラフ描画）",
+                  "17_値によるソートsort_values()とインデックスによるソートsort_index()",
+                  "36_単一インデックスとマルチインデックスにおけるDataFrame/Seriesのlen()、shape、sizeの使い方",
+                  "40_pd.crosstab()によるクロス集計（margins、normalize）",
+                  "41_pd.pivot_table()によるピボットテーブル作成（index/columns/values/margins/aggfunc）",
+                  "58_mode()による最頻値の集計（Series/DataFrame、複数最頻値、describe()のtop/freq）",
+                  "59_describe()による記述統計（include/exclude型指定、percentiles引数）",
+                  "63_round()による四捨五入とDecimalのROUND_HALF_UP/HALF_EVENによる丸め方式の比較",
+                  "70_idxmax()/idxmin()による最大値・最小値に対応するインデックスの検索（同値やNaNの扱いを含む）",
+                  "71_rank()による順位付け（method引数average/min/max/dense/first、na_option、pct）",
+                  "73_quantile()による分位数計算（複数分位数、interpolation補間方式、データ型による違い）",
+                  "74_median()による中央値の計算（Series/DataFrame、axis=1での行方向計算）",
+                  "77_nlargest()/nsmallest()による上位・下位N件の取得（keep引数、複数列でのソート）",
+                  "78_agg()/aggregate()による集計方法（関数のリスト、列ごとに異なる関数の指定、axis=1、カスタム関数）",
+                  "79_cumsum()/cumprod()による累積計算（行/列axis、skipnaによる欠損値の扱い）"
+                ]
+              },
+              {
+                "title": "可視化",
+                "items": [
+                  "45_corr()で相関係数行列を計算しseaborn.heatmap()でヒートマップを描画（住宅価格データセットの例を含む）",
+                  "46_Seaborn heatmap()によるリスト/配列/DataFrameのヒートマップ描画とスタイル指定（annot、cmap、figsizeなど）",
+                  "81_corr()で混在するデータ型における相関係数行列の挙動を確認し、seaborn.heatmap()でヒートマップを描画（住宅価格データセットの例を含む）"
+                ]
+              },
+              {
+                "title": "表示設定・その他",
+                "items": [
+                  "32_おすすめ書籍の紹介：Python Data Science Handbook（データサイエンスの参考資料）",
+                  "43_バージョン情報の確認（pd.__version__、pd.show_versions()）",
+                  "48_Pythonリスト/array.array/NumPy配列の比較とDataFrame.pivot_table(aggfunc='mean')の使い方",
+                  "65_pd.options.displayによる表示オプション設定（precision、float_format、max_rows、max_columnsなど）",
+                  "66_表示オプションの取得・設定・リセット（get_option、set_option、reset_option、option_context）",
+                  "75_同質・異質dtypeのDataFrameにおけるiloc/locスライス時のビューとコピーの挙動（_is_view、shares_memory）",
+                  "76_loc/ilocで単一行・列を選択しSeriesを返す際のビューの特性と元のDataFrameへの影響",
+                  "80_Pandasで廃止されたpd.np（NumPyモジュールを指す）の使用例"
+                ]
+              }
             ]
           }
         },
