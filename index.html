@@ -217,7 +217,7 @@
     document.getElementById('footer-email-value').textContent = data.contact.email;
     document.getElementById('footer-updated-label').textContent = data.footer.lastUpdatedLabel;
     document.getElementById('footer-updated-value').textContent = data.footer.lastUpdated;
-    document.getElementById('footer-copyright').textContent = data.footer.copyright.replace('{year}', new Date().getFullYear());
+    document.getElementById('footer-copyright').textContent = data.footer.copyright;
   }
 
   // Labels in the locale files end with a colon, which the card layout doesn't need.
