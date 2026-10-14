@@ -620,10 +620,29 @@ main {
   box-shadow: var(--shadow);
 }
 
+.project-card-type {
+  align-self: flex-start;
+  padding: 1px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.75em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
 .project-card-name {
   margin: 0;
   font-size: 1.05em;
   font-weight: 700;
+}
+
+.project-card-summary {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9em;
+  line-height: 1.6;
 }
 
 .project-card-more {
