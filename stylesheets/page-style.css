@@ -90,6 +90,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
+  background: var(--surface);
   background: color-mix(in srgb, var(--surface) 82%, transparent);
   backdrop-filter: saturate(160%) blur(12px);
   -webkit-backdrop-filter: saturate(160%) blur(12px);
