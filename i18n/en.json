@@ -62,14 +62,15 @@
         {
           "id": "python-numpy",
           "name": "Numpy",
+          "type": "Study notes",
+          "summary": "25 runnable examples of everyday NumPy operations, each with its output shown.",
           "tags": ["Python", "NumPy"],
           "link": "https://github.com/NYao925/Python-Numpy",
           "detail": {
             "intro": [
-              "I go by \"Dumplings Majesty\" — obviously not my real name, just because I love eating dumplings. As a student I knew nothing about Python, Machine Learning, or AI, so after starting work I began a long journey of self-study. I really appreciated all the people online quietly sharing what they'd learned, and it helped me a lot — so I decided to do the same and give back what I've learned.",
-              "I'm assuming you already have some basic Python knowledge, and that you're someone who gets stuck in daily work not knowing what a certain function does. Here I first summarize how to use various NumPy and Pandas functions, and later I'll also summarize the pitfalls I ran into while tinkering with things like scikit-learn, TensorFlow, and MXNet. Hope it helps.",
-              "There are definitely mistakes, and it's definitely not complete — but anyway, growth is all about making mistakes along the way.",
-              "NumPy → Pandas → Machine Learning — that's my path of self-improvement..."
+              "Notes I put together while teaching myself NumPy: 25 Python scripts, each tackling one common question — creating, inserting, deleting and sorting arrays, handling missing values (NaN), filtering by condition, matrix operations, and reading and manipulating images with NumPy.",
+              "The output of every snippet is written in a comment right below it, so you can follow along without running anything. To try it yourself, clone the repo and run the script with the matching number; the sample images live in the data/ folder.",
+              "It’s meant for people who already know a little Python and want a quick answer to “how do I use this function again?” — just look up the script by number or keyword."
             ],
             "topics": [
               "01_NumPy image processing (reading, transforming, saving)",
@@ -103,14 +104,15 @@
         {
           "id": "python-pandas",
           "name": "Pandas",
+          "type": "Study notes",
+          "summary": "81 Pandas data-wrangling examples, from reading and filtering to cleaning, aggregation and visualization.",
           "tags": ["Python", "Pandas"],
           "link": "https://github.com/NYao925/Python-Pandas",
           "detail": {
             "intro": [
-              "I go by \"Dumplings Majesty\" — obviously not my real name, just because I love eating dumplings. As a student I knew nothing about Python, Machine Learning, or AI, so after starting work I began a long journey of self-study. I really appreciated all the people online quietly sharing what they'd learned, and it helped me a lot — so I decided to do the same and give back what I've learned.",
-              "I'm assuming you already have some basic Python knowledge, and that you're someone who gets stuck in daily work not knowing what a certain function does. Here I first summarize how to use various NumPy and Pandas functions, and later I'll also summarize the pitfalls I ran into while tinkering with things like scikit-learn, TensorFlow, and MXNet. Hope it helps.",
-              "There are definitely mistakes, and it's definitely not complete — but anyway, growth is all about making mistakes along the way.",
-              "NumPy → Pandas → Machine Learning — that's my path of self-improvement..."
+              "The sequel to the NumPy notes: 81 Python scripts covering most everyday data work — reading and writing CSV, Excel and JSON, selecting and filtering rows and columns, cleaning missing and duplicate values, working with strings and dates, group-by statistics and pivot tables, and checking correlations between columns with a heatmap.",
+              "As with the NumPy notes, every snippet comes with its output. Some examples use a house-prices dataset in the data/ folder, which keeps them closer to real data-analysis work.",
+              "Whenever you wonder “how do I do this in Pandas?”, look up the matching script by number or keyword. I’m still adding to it — the latest update was in July 2025."
             ],
             "topics": [
               "01_Renaming DataFrame row/column labels (rename, inplace, batch renaming with lambda, add_prefix/add_suffix)",
@@ -200,15 +202,14 @@
         {
           "id": "print-kids-kanji-downloader",
           "name": "Kanji PDF Downloader",
+          "type": "Tool",
+          "summary": "A small command-line tool that downloads every kanji worksheet PDF on a print-kids.net page in one go.",
           "tags": ["Python", "requests", "BeautifulSoup"],
           "link": "https://github.com/nyao925/print-kids-kanji-downloader",
           "detail": {
             "intro": [
-              "My kid is learning Japanese kanji, and we often use kanji practice worksheet PDFs from sites like print-kids.net — a single page can have dozens of PDF links, and clicking through and downloading them one by one got tedious, so I wrote a small tool that grabs every PDF linked from a given practice page in one go.",
-              "The link-finding part walks a, iframe, embed, and object tags on the page and collects any whose href/src/data attribute points to a .pdf file. For links a script generated dynamically that aren't caught by a tag attribute, it falls back to scanning the raw HTML with a regex so fewer links slip through.",
-              "Each filename is built primarily from the visible label text next to the link (stripping the trailing \"ダウンロード\" that commonly appears), falling back to the title attribute, and finally to the filename from the URL path if neither is available. The generated name is then sanitized to strip out characters the filesystem won't allow, so saving never fails on a bad character.",
-              "Downloads are streamed to disk in chunks rather than loading a whole file into memory at once. If a file with the same name already exists it's skipped automatically, so re-running the script never re-downloads anything and an interrupted run can just be resumed; it also prints progress (\"N of M\") as it goes.",
-              "The default target page is a 2nd-grade kanji review sheet, but you can pass any other print-kids.net practice page URL as a command-line argument, so it's easy to reuse for different grades or topics — I've already used it to pull down over 280 practice PDFs and print them out for my kid."
+              "My kid is learning Japanese kanji, and we use the practice worksheet PDFs from print-kids.net a lot. But a single page can have dozens of download links, and clicking them one by one got old fast — so I wrote this small tool: point it at a practice page and it saves every PDF on that page to your computer in one go.",
+              "Files that are already downloaded are skipped automatically, so an interrupted run just picks up where it left off, and swapping in a different page URL fetches worksheets for other grades or topics. I’ve used it to download more than 280 PDFs so far, printed out for my kid to work through."
             ],
             "topics": [
               "Automatically extracts PDF links by scanning the href/src/data attributes of a, iframe, embed, and object tags on the target page",
