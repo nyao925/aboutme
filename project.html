@@ -98,7 +98,7 @@
     document.getElementById('footer-email-value').textContent = data.contact.email;
     document.getElementById('footer-updated-label').textContent = data.footer.lastUpdatedLabel;
     document.getElementById('footer-updated-value').textContent = data.footer.lastUpdated;
-    document.getElementById('footer-copyright').textContent = data.footer.copyright;
+    document.getElementById('footer-copyright').textContent = data.footer.copyright.replace('{year}', new Date().getFullYear());
 
     const projectId = getProjectId();
     const project = data.experience.personalProjects.items.find(function (item) {
