@@ -470,6 +470,11 @@ main {
   border-bottom: none;
 }
 
+/* certification group names (e.g. "Microsoft Power Platform") need a wider label column */
+#certifications-groups .skill-group {
+  grid-template-columns: 210px 1fr;
+}
+
 .skill-group-name {
   color: var(--muted);
   font-size: 0.9em;
@@ -987,7 +992,8 @@ footer p {
     height: 48px;
   }
 
-  .skill-group {
+  .skill-group,
+  #certifications-groups .skill-group {
     grid-template-columns: 1fr;
     gap: 6px;
   }

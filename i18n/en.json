@@ -339,26 +339,56 @@
     },
     "certifications": {
       "title": "Certifications",
-      "items": [
-        "ServiceNow - IT Service Management",
-        "ServiceNow Certified Application Developer",
-        "ServiceNow Certified System Administrator",
-        "Microsoft Power Platform Solution Architect Expert",
-        "Microsoft Power Platform Developer Associate",
-        "Microsoft Power Platform App Maker Associate",
-        "Microsoft Power Platform Fundamentals",
-        "Microsoft Azure Developer Associate",
-        "Microsoft Azure AI Engineer Associate",
-        "Microsoft Azure Data Fundamentals",
-        "Microsoft Azure AI Fundamentals",
-        "Microsoft Azure Fundamentals",
-        "IBM Certified Advocate - Cloud v2",
-        "IBM Garage Essentials",
-        "Java SE 8 Programmer",
-        "Oracle Java Programmer Silver",
-        "ITIL Foundation Certification",
-        "Github Copilot (GH300)",
-        "Anthropic Claude Certified Associate - Foundations"
+      "groups": [
+        {
+          "name": "ServiceNow",
+          "items": [
+            "IT Service Management",
+            "Certified Application Developer",
+            "Certified System Administrator"
+          ]
+        },
+        {
+          "name": "Microsoft Power Platform",
+          "items": [
+            "Solution Architect Expert",
+            "Developer Associate",
+            "App Maker Associate",
+            "Fundamentals"
+          ]
+        },
+        {
+          "name": "Microsoft Azure",
+          "items": [
+            "Developer Associate",
+            "AI Engineer Associate",
+            "Data Fundamentals",
+            "AI Fundamentals",
+            "Fundamentals"
+          ]
+        },
+        {
+          "name": "AI tools",
+          "items": [
+            "GitHub Copilot (GH300)",
+            "Anthropic Claude Certified Associate - Foundations"
+          ]
+        },
+        {
+          "name": "Java",
+          "items": [
+            "Java SE 8 Programmer",
+            "Oracle Java Programmer Silver"
+          ]
+        },
+        {
+          "name": "Other",
+          "items": [
+            "IBM Certified Advocate - Cloud v2",
+            "IBM Garage Essentials",
+            "ITIL Foundation Certification"
+          ]
+        }
       ]
     }
   },
