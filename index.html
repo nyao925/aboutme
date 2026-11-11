@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>关于我 | 饺子大人</title>
-  <link href="./stylesheets/page-style.css?v=20261014c" type="text/css" rel="stylesheet">
+  <link href="./stylesheets/page-style.css?v=20261111" type="text/css" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./static/img/favicon/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./static/img/favicon/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./static/img/favicon/apple-touch-icon.png">
@@ -103,7 +103,7 @@
 
   <section class="card">
     <h2 id="certifications-title" class="section-title"></h2>
-    <ul id="certifications-items" class="chips chips-outline"></ul>
+    <div id="certifications-groups" class="chips-outline"></div>
   </section>
 
   <section class="card">
@@ -150,7 +150,7 @@
 <script>
   async function loadLocale(lang) {
     try {
-      const res = await fetch('./i18n/' + lang + '.json');
+      const res = await fetch('./i18n/' + lang + '.json', { cache: 'no-cache' });
       if (!res.ok) {
         throw new Error('Failed to load locale: ' + lang);
       }
@@ -182,7 +182,7 @@
     });
 
     document.getElementById('skills-title').textContent = data.skills.title;
-    renderSkillGroups(data.skills.groups);
+    renderChipGroups('skills-groups', data.skills.groups);
 
     document.getElementById('closing').textContent = data.closing;
 
@@ -196,7 +196,8 @@
     renderPersonalProjectCards(personalProjects);
 
     renderTimelineSection('education', data.experience.education);
-    renderListSection('certifications', data.experience.certifications, 'chip');
+    document.getElementById('certifications-title').textContent = data.experience.certifications.title;
+    renderChipGroups('certifications-groups', data.experience.certifications.groups);
 
     document.getElementById('contact-title').textContent = data.contact.title;
     document.getElementById('contact-desc').textContent = data.contact.desc;
@@ -225,15 +226,12 @@
     return label.replace(/[:：]\s*$/, '');
   }
 
-  function renderListSection(prefix, section, itemClass) {
+  function renderListSection(prefix, section) {
     document.getElementById(prefix + '-title').textContent = section.title;
     const list = document.getElementById(prefix + '-items');
     list.innerHTML = '';
     section.items.forEach(function (item) {
       const li = document.createElement('li');
-      if (itemClass) {
-        li.className = itemClass;
-      }
       li.textContent = item;
       list.appendChild(li);
     });
@@ -263,8 +261,8 @@
     });
   }
 
-  function renderSkillGroups(groups) {
-    const wrapper = document.getElementById('skills-groups');
+  function renderChipGroups(wrapperId, groups) {
+    const wrapper = document.getElementById(wrapperId);
     wrapper.innerHTML = '';
     groups.forEach(function (group) {
       const row = document.createElement('div');
